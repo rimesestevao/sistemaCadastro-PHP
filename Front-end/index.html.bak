@@ -11,7 +11,7 @@
 </head>
 
 <body>
-    <div class="container mt-3 mb-3 ml-auto mr-auto">
+    <div class="container mt-3 mb-3">
         <form class="row g-3">
             <div class="col-md-6">
                 <label for="inputName" class="form-label">Nome</label>
