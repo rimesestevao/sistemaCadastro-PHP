@@ -42,7 +42,7 @@
                 <label for="inputPhone" class="form-label">Celular</label>
                 <input type="text" class="form-control" id="inputPhone">
             </div>
-            <div class="col-md-6">
+            <div class="col-6">
                 <label for="inputAddress" class="form-label">Endereço</label>
                 <input type="text" class="form-control" id="inputAddress" placeholder="Av. Cidade de Lima, 86">
             </div>
