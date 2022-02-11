@@ -1,0 +1,59 @@
+.nome {
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.rg {
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.cpf {
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.idade {
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.sexo {
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.botaoProximo {
+    margin-bottom: 10px;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cidade {
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.cep {
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.endereco {
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.email {
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.celular {
+    width: 100%;
+    margin-bottom: 10px;
+}

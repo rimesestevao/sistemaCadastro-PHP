@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <title>Sistema de cadastro</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="jumbotron">
+            <h1 class="display-4">De onde você é?</h1>
+            <p class="lead">Preencha o formulário com seus dados. (Etapa 2 de 3)</p>
+            <hr class="my-4">
+            <div class="">
+                <form method="get" action="arquivophp.php" class="row g-3">
+                    <div class="cidade">
+                        <label for="cidade" class="form-label">Cidade</label>
+                        <input type="text" class="form-control" id="cidade">
+                    </div>
+                    <div class="endereco">
+                        <label for="endereco" class="form-label">Endereço</label>
+                        <input type="text" class="form-control" id="endereco" placeholder="Av. Cidade de Lima, 86">
+                    </div>
+                    <div class="cep">
+                        <label for="cep">CEP</label>
+                        <input type="text" class="form-control" id="cep">
+                    </div>
+                    <div class="botaoProximo">
+                        <button type="submit" class="btn btn-primary">Próximo</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
