@@ -17,7 +17,7 @@
 
     <form autocomplete="off" action="arquivo.php" method="GET">
         <h2>
-            Cadastro da providência (1/3)
+            Cadastro da providência
         </h2>
 
         <div class="input">
