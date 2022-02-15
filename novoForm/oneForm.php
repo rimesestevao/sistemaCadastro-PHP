@@ -15,7 +15,7 @@
 
 <body>
 
-    <form autocomplete="off" action="arquivo.php" method="post">
+    <form autocomplete="off" action="arquivo.php" method="GET">
         <h2>
             Cadastro da providência (1/3)
         </h2>
@@ -47,15 +47,6 @@
             <span class="error"></span>
         </div>
 
-        <div class="custom-select">
-            <select required>
-              <option value="">Escolha seu sexo</option>
-              <option value="1">Masculino</option>
-              <option value="2">Feminino</option>
-              <option value="3">Outro</option>
-            </select>
-        </div>
-
         <div class="input">
             <input required type="text" name="cidade" />
             <label>Cidade</label>
@@ -80,9 +71,60 @@
             <span class="error"></span>
         </div>
 
-        <button type="button" class="btn btn-dark">Próximo</button>
+
+        <div class="custom-select">
+            <select required>
+              <option value="">Escolha seu sexo</option>
+              <option value="1">Masculino</option>
+              <option value="2">Feminino</option>
+              <option value="3">Outro</option>
+            </select>
+        </div>
+
+
+        <button type="button" class="btn btn-dark">Enviar</button>
 
     </form>
+    <?php
+$nome = $_GET["nome"];
+$idade = $_GET["idade"];
+$email = isset($_GET["email"])?$_GET["email"]:["não informado"];
+$sexo = $_GET["sexo"];;
+$cpf = $_GET["cpf"];
+$rg = $_GET["rg"];
+$cel = $_GET["cel"];
+$endereco = $_GET["endereco"];
+$cidade = $_GET["cidade"];
+
+if($rg != 9){ 
+echo "rg inválido";
+}
+
+
+function validaCPF($cpf) {
+
+    $cpf = preg_replace( '/[^0-9]/is', '', $cpf );
+
+    if (strlen($cpf) != 11) {
+        return false;
+    }
+
+    if (preg_match('/(\d)\1{10}/', $cpf)) {
+        return false;
+    }
+
+    for ($t = 9; $t < 11; $t++) {
+        for ($d = 0, $c = 0; $c < $t; $c++) {
+            $d += $cpf[$c] * (($t + 1) - $c);
+        }
+        $d = ((10 * $d) % 11) % 10;
+        if ($cpf[$c] != $d) {
+            return false;
+        }
+    }
+    return true;
+}
+?>
 </body>
 
 </html>
