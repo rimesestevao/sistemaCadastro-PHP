@@ -85,7 +85,8 @@
         <button type="button" class="btn btn-dark">Enviar</button>
 
     </form>
-    <?php
+    <!--
+        <?php /*
 $nome = $_GET["nome"];
 $idade = $_GET["idade"];
 $email = isset($_GET["email"])?$_GET["email"]:["não informado"];
@@ -124,7 +125,9 @@ function validaCPF($cpf) {
     }
     return true;
 }
+*/
 ?>
+-->
 </body>
 
 </html>
