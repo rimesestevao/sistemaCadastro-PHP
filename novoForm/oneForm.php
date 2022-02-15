@@ -82,7 +82,7 @@
         </div>
 
 
-        <button type="button" class="btn btn-dark">Enviar</button>
+        <button type="submit" class="btn btn-dark">Enviar</button>
 
     </form>
     <!--
