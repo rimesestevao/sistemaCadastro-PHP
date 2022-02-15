@@ -56,6 +56,30 @@
             </select>
         </div>
 
+        <div class="input">
+            <input required type="text" name="cidade" />
+            <label>Cidade</label>
+        </div>
+
+
+        <div class="input">
+            <input required type="text" name="endereco" />
+            <label>Endereço</label>
+        </div>
+
+        <div class="input">
+            <input required type="email" name="email" />
+            <label>E-mail</label>
+            <span class="error"></span>
+        </div>
+
+
+        <div class="input">
+            <input required type="tel" name="celular" />
+            <label>Celular</label>
+            <span class="error"></span>
+        </div>
+
         <button type="button" class="btn btn-dark">Próximo</button>
 
     </form>
