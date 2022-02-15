@@ -126,28 +126,16 @@ input#search-bar {
     right: -45px;
 }
 
-.btn-outline-success:hover {
-    background-color: #7320B5;
-    border: solid #7320B5;
-}
-
-.btn-outline-success {
-    border: solid #7320B5;
-    color: #7320B5;
-}
-
-.btn:active:focus {
-    outline: thin dotted;
-    outline: 5px auto #A144EB;
-    outline-offset: -2px;
-}
-
-.btn-outline-success:active {
-    border-color: #A144EB;
-}
-
 .btn {
-    border-radius: 0px;
+    background-color: #7320B5;
+}
+
+.btn:hover {
+    background-color: #3A104E;
+}
+
+.btn:focus {
+    background-color: #A144EB;
 }
 
 
