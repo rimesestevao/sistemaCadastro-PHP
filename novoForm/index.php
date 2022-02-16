@@ -24,7 +24,12 @@ $endereco = $_GET["endereco"];
 $email = $_GET["email"];
 $celular = $_GET["celular"];
 
-$sql = "INSERT INTO matricula ($nome, $idade, $cpf, $rg, $sexo, $cidade, $endereco, $email, $celular) VALUES ($nome, $idade, $cpf, $rg, $sexo, $cidade, $endereco, $email, $celular)";
+$sql = "INSERT INTO matricula (nome, idade, cpf, rg, sexo, cidade, endereco, email, celular) VALUES ('$nome', '$idade', '$cpf', '$rg', '$sexo', '$cidade', '$endereco', '$email', '$celular')";
+
+
+
+
+
 
 if (mysqli_query($conn, $sql)) {
       echo "New record created successfully";
