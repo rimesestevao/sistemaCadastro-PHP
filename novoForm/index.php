@@ -26,15 +26,15 @@ $celular = $_GET["celular"];
 
 $my_Insert_Statement = $my_Db_Connection->prepare("INSERT INTO matricula (nome, idade, cpf, rg, sexo, cidade, endereço, email, celular) VALUES (nome, idade, cpf, rg, sexo, cidade, endereço, email, celular)");
 
-$my_Insert_Statement->bindParam(':nome', $nome);
-$my_Insert_Statement->bindParam(':idade', $idade);
-$my_Insert_Statement->bindParam(':cpf', $cpf);
-$my_Insert_Statement->bindParam(':rg', $rg);
-$my_Insert_Statement->bindParam(':sexo', $sexo);
-$my_Insert_Statement->bindParam(':cidade', $cidade);
-$my_Insert_Statement->bindParam(':endereço', $endereco);
-$my_Insert_Statement->bindParam(':email', $email);
-$my_Insert_Statement->bindParam(':celular', $celular);
+$my_Insert_Statement->bindParam('nome', $nome);
+$my_Insert_Statement->bindParam('idade', $idade);
+$my_Insert_Statement->bindParam('cpf', $cpf);
+$my_Insert_Statement->bindParam('rg', $rg);
+$my_Insert_Statement->bindParam('sexo', $sexo);
+$my_Insert_Statement->bindParam('cidade', $cidade);
+$my_Insert_Statement->bindParam('endereço', $endereco);
+$my_Insert_Statement->bindParam('email', $email);
+$my_Insert_Statement->bindParam('celular', $celular);
 
 if ($my_Insert_Statement->execute()) {
       echo "New record created successfully";
