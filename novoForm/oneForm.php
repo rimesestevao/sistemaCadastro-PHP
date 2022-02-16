@@ -87,7 +87,7 @@
     </form>
     <?php
 
-        $host = "http://10.0.0.1/phpmyadmin/";
+        $host = "localhost";
         $user ="riogamer";
         $pass = "l1b3r4t0r24";
         $banco = "riogamer";
