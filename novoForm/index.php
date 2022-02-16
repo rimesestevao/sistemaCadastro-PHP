@@ -2,7 +2,7 @@
 $servername = "127.0.0.1";
 $database = "riogamer";
 $username = "riogamer";
-$password = "l1b3r4t0r24";
+$password = "abelha2021";
 $sql = "mysql:host=$servername;dbname=$database;";
 $dsn_Options = [PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION];
 
