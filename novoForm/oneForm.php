@@ -15,7 +15,7 @@
 
 <body>
 
-    <form autocomplete="off" action="index.php" method="get">
+    <form autocomplete="off" action="index.php" method="post">
         <h2>
             Cadastro da providência
         </h2>
