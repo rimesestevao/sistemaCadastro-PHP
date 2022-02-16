@@ -23,28 +23,24 @@
         <div class="input">
             <input required type="text" name="nome" />
             <label>Nome</label>
-            <span class="error"></span>
         </div>
 
 
         <div class="input">
-            <input required type="text" name="cpf" />
+            <input required type="" name="cpf" />
             <label>CPF</label>
-            <span class="error"></span>
         </div>
 
 
         <div class="input">
             <input required type="text" name="rg" />
             <label>RG</label>
-            <span class="error"></span>
         </div>
 
 
         <div class="input">
             <input required type="number" name="idade" />
             <label>Idade</label>
-            <span class="error"></span>
         </div>
 
         <div class="input">
@@ -61,23 +57,21 @@
         <div class="input">
             <input required type="email" name="email" />
             <label>E-mail</label>
-            <span class="error"></span>
         </div>
 
 
         <div class="input">
-            <input required type="tel" name="celular" />
+            <input required type="tel" pattern="{0-9}{2}-{0-9}{5}-{0-9}{4}" name="celular" />
             <label>Celular</label>
-            <span class="error"></span>
         </div>
 
 
         <div class="custom-select">
-            <select required>
+            <select required name="sexo">
               <option value="">Escolha seu sexo</option>
-              <option value="1">Masculino</option>
-              <option value="2">Feminino</option>
-              <option value="3">Outro</option>
+              <option value="masculino">Masculino</option>
+              <option value="feminino">Feminino</option>
+              <option value="outro">Outro</option>
             </select>
         </div>
 
