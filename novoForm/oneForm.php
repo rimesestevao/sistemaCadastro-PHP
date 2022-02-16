@@ -67,7 +67,7 @@
 
 
         <div class="custom-select">
-            <select required name="sexo">
+            <select required class="form-control" name="sexo">
               <option value="">Escolha seu sexo</option>
               <option value="masculino">Masculino</option>
               <option value="feminino">Feminino</option>
