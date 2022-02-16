@@ -15,7 +15,7 @@
 
 <body>
 
-    <form autocomplete="off" action="arquivo.php" method="get">
+    <form autocomplete="off" action="index.php" method="get">
         <h2>
             Cadastro da providência
         </h2>
@@ -85,20 +85,6 @@
         <button type="submit" class="btn btn-dark">Enviar</button>
 
     </form>
-    <?php
-
-        $host = "localhost";
-        $user ="riogamer";
-        $pass = "l1b3r4t0r24";
-        $banco = "riogamer";
-
-        $link = mysqli_connect($host,$user,$pass,$banco);
-        if(mysqli_connect_errno($link)){
-            echo "erro de conexão";
-        }else{
-            echo "conexão estabelecida";
-        }
-    ?>
 </body>
 
 </html>

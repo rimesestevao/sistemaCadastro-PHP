@@ -1,5 +1,5 @@
 <?php
-$servername = "10.0.0.1/~riogamer";
+$servername = "127.0.0.1";
 $database = "riogamer";
 $username = "riogamer";
 $password = "l1b3r4t0r24";
