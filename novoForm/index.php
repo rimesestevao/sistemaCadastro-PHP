@@ -24,7 +24,7 @@ $endereco = $_GET["endereco"];
 $email = $_GET["email"];
 $celular = $_GET["celular"];
 
-$my_Insert_Statement = $my_Db_Connection->prepare("INSERT INTO matricula (nome, idade, cpf, rg, sexo, cidade, endereço, email, celular) VALUES (:nome, :idade, :cpf, :rg, :sexo, :cidade, :endereço, :email, :celular)");
+$my_Insert_Statement = $my_Db_Connection->prepare("INSERT INTO matricula (nome, idade, cpf, rg, sexo, cidade, endereço, email, celular) VALUES (nome, idade, cpf, rg, sexo, cidade, endereço, email, celular)");
 
 $my_Insert_Statement->bindParam(':nome', $nome);
 $my_Insert_Statement->bindParam(':idade', $idade);
