@@ -1,18 +1,12 @@
 <?php
-include_once "conexao.php";
 
+$sql = "SELECT * FROM users";
+if ($result=mysqli_query($conn,$sql)) {
+    $rowcount=mysqli_num_rows($result);
+    echo "The total number of rows are: ".$rowcount; 
+}
 
-$queryMatricula = "SELECT COUNT(id) AS qntMatriculas FROM matriculas";
-$resultMatriculas = $conn->prepare($queryMatricula);
-$resultMatriculas->execute();
-
-$rowMatricula = $resultMatriculas->fetch(PDO::FETCH_ASSOC);
-echo"Quantidade de matriculas é: $rowMatricula['qntMatriculas']"
-
-
-
-
-
+$matricula = $rowcount + 1;
 $nome = $_GET["nome"];
 $idade = $_GET["idade"];
 $cpf = $_GET["cpf"];
@@ -24,7 +18,7 @@ $email = $_GET["email"];
 $celular = $_GET["celular"];
 
 
-$sql = "INSERT INTO matricula (nome, idade, cpf, rg, sexo, cidade, endereco, email, celular) VALUES ('$nome', '$idade', '$cpf', '$rg', '$sexo', '$cidade', '$endereco', '$email', '$celular')";
+$sql = "INSERT INTO matricula (matricula, nome, idade, cpf, rg, sexo, cidade, endereco, email, celular) VALUES ('$matricula','$nome', '$idade', '$cpf', '$rg', '$sexo', '$cidade', '$endereco', '$email', '$celular')";
 
 
 
