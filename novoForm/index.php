@@ -2,10 +2,12 @@
 
 include "conexao.php";
 
-$result = $mysqli->query("SELECT Code, Name FROM Country ORDER BY Name");
+$result = mysqli_query($link, "SELECT Code, Name FROM Country ORDER BY Name");
 
 /* Get the number of rows in the result set */
-$row_cnt = $result->num_rows;
+$row_cnt = mysqli_num_rows($result);
+
+printf("Result set has %d rows.\n", $row_cnt);
 
 $matricula = $row_cnt + 1;
 $nome = $_GET["nome"];
