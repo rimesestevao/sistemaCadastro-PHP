@@ -8,7 +8,7 @@ if ($result=mysqli_query($conn,$sql)) {
     echo "The total number of rows are: ".$rowcount; 
 }
 
-$matricula = $rowcount + 1;
+$matricula = $rowcount;
 $nome = $_GET["nome"];
 $idade = $_GET["idade"];
 $cpf = $_GET["cpf"];
