@@ -67,11 +67,11 @@
 
 
         <div class="custom-select">
-            <select required class="form-control" name="sexo">
+            <select required name="sexo">
               <option value="">Escolha seu sexo</option>
-              <option value="masculino">Masculino</option>
-              <option value="feminino">Feminino</option>
-              <option value="outro">Outro</option>
+              <option value="1">Masculino</option>
+              <option value="2">Feminino</option>
+              <option value="3">Outro</option>
             </select>
         </div>
 
