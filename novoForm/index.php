@@ -25,7 +25,7 @@ $email = $_GET["email"];
 $celular = $_GET["celular"];
 
 
-echo "$sexo";
+echo "o sexo é $sexo";
 
 $sql = "INSERT INTO matricula (nome, idade, cpf, rg, sexo, cidade, endereco, email, celular) VALUES ('$nome', '$idade', '$cpf', '$rg', '$sexo', '$cidade', '$endereco', '$email', '$celular')";
 
