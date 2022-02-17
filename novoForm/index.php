@@ -2,14 +2,13 @@
 
 include "conexao.php";
 
-$result = mysqli_query($link, "SELECT Code, Name FROM Country ORDER BY Name");
+$sql = "SELECT * FROM users";
+if ($result=mysqli_query($conn,$sql)) {
+    $rowcount=mysqli_num_rows($result);
+    echo "The total number of rows are: ".$rowcount; 
+}
 
-/* Get the number of rows in the result set */
-$row_cnt = mysqli_num_rows($result);
-
-printf("Result set has %d rows.\n", $row_cnt);
-
-$matricula = $row_cnt + 1;
+$matricula = $rowcount + 1;
 $nome = $_GET["nome"];
 $idade = $_GET["idade"];
 $cpf = $_GET["cpf"];
