@@ -1,5 +1,7 @@
 <?php
 
+include "conexao.php";
+
 $sql = "SELECT * FROM users";
 if ($result=mysqli_query($conn,$sql)) {
     $rowcount=mysqli_num_rows($result);
