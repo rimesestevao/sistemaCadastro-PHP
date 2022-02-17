@@ -30,7 +30,7 @@ echo "$sexo";
 $sql = "INSERT INTO matricula (nome, idade, cpf, rg, sexo, cidade, endereco, email, celular) VALUES ('$nome', '$idade', '$cpf', '$rg', '$sexo', '$cidade', '$endereco', '$email', '$celular')";
 
 
-
+$teste = 0;
 
 
 
