@@ -22,7 +22,7 @@
 
         <div class="input">
             <input required type="text" name="nome" />
-            <label>Nome</label>
+            <label>Nome Completo</label>
         </div>
 
 
