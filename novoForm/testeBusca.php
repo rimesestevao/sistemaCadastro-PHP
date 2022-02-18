@@ -5,13 +5,7 @@
 </form>
 
 <?php
-    $servidor = "10.0.0.1/~riogamer";
-    $usuario = "riogamer";
-    $senha = "l1b3r4t0r24";
-    $dbname = "riogamer";
-
-    //Criar a conexao
-    $conn = mysqli_connect($servidor, $usuario, $senha, $dbname);
+   include "conexao.php"
 
     $pesquisar = $_POST['pesquisar'];
     $result_cursos = "SELECT * FROM matricula WHERE matricula LIKE '%$pesquisar%' LIMIT 5";
