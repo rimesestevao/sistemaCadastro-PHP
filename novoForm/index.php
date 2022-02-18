@@ -5,7 +5,6 @@ include "conexao.php";
 $sql = "SELECT * FROM matricula";
 if ($result=mysqli_query($conn,$sql)) {
     $rowcount=mysqli_num_rows($result);
-    echo "The total number of rows are: ".$rowcount; 
 }
 
 $matricula = $rowcount + 1;
@@ -16,21 +15,49 @@ $rg = $_GET["rg"];
 $sexo = $_GET["sexo"];
 $cidade = $_GET["cidade"];
 $endereco = $_GET["endereco"];
-$email = $_GET["email"];
+$email = isset($_GET["email"])?$_GET["email"]:["não informado"];
 $celular = $_GET["celular"];
 
-
-$sql = "INSERT INTO matricula (matricula, nome, idade, cpf, rg, sexo, cidade, endereco, email, celular) VALUES ('$matricula','$nome', '$idade', '$cpf', '$rg', '$sexo', '$cidade', '$endereco', '$email', '$celular')";
-
-
-
-
-
-if (mysqli_query($conn, $sql)) {
-      echo "New record created successfully";
-} else {
-      echo "Error: " . $sql . "<br>" . mysqli_error($conn);
+      
+function validaCPF($cpf) {
+      
+      $cpf = preg_replace( '/[^0-9]/is', '', $cpf );
+      
+      if (strlen($cpf) != 11) {
+            return false;
+      }
+      
+      if (preg_match('/(\d)\1{10}/', $cpf)) {
+            return false;
+      }
+      
+      for ($t = 9; $t < 11; $t++) {
+            for ($d = 0, $c = 0; $c < $t; $c++) {
+                  $d += $cpf[$c] * (($t + 1) - $c);
+                  }
+            $d = ((10 * $d) % 11) % 10;
+            if ($cpf[$c] != $d) {
+                  return false;
+            }
+      }
+      return true;
 }
-mysqli_close($conn);
 
+
+
+if( validaCPF($cpf) ){
+      
+      $sql = "INSERT INTO matricula (matricula, nome, idade, cpf, rg, sexo, cidade, endereco, email, celular) VALUES ('$matricula','$nome', '$idade', '$cpf', '$rg', '$sexo', '$cidade', '$endereco', '$email', '$celular')";
+
+      if (mysqli_query($conn, $sql)) {
+            echo "New record created successfully";
+      } else {
+            echo "Error: " . $sql . "<br>" . mysqli_error($conn);
+      }
+      mysqli_close($conn);
+
+}
+else{
+      echo"o cpf $cpf não é válido";
+}
 ?>
