@@ -6,7 +6,7 @@
     $result_matricula = mysqli_query ($conn, $result_matricula);
     
     while($rows_matricula = mysqli_fetch_array($result_matricula)){
-        echo "Número da matricula:" .$rows_matricula['matricula']."<br>";
+        echo "Número da matricula:" .$rows_matricula['nome']."<br>";
     }
         
 
