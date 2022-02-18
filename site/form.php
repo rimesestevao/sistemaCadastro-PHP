@@ -1,5 +1,6 @@
 <h1>Pesquisar Cursos</h1>
 <form method="POST" action="pesquisar.php">
-    Pesquisar:<input type="text" name="pesquisar" placeholder="PESQUISAR">
+    Pesquisar:<input type="text" name="pesquisar" placeholder="estevao almeida">
     <input type="submit" value="ENVIAR">
 </form>
+
