@@ -1,6 +1,6 @@
 <?php
    include "conexao.php";
 
-    $pesquisar = $_POST['search'];
+    $pesquisar = $_POST['pesquisar'];
     echo $pesquisar;
 ?>
