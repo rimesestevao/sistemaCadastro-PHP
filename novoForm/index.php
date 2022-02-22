@@ -48,6 +48,9 @@ function validaCPF($cpf) {
 
 
 
+
+
+
 if( validaCPF($cpf) ){
       
       $sql = "INSERT INTO matricula (matricula, nome, idade, cpf, rg, sexo, cidade, endereco, email, celular) VALUES ('$matricula','$nome', '$idade', '$cpf', '$rg', '$sexo', '$cidade', '$endereco', '$email', '$celular')";
