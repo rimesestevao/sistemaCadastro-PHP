@@ -1,0 +1,52 @@
+
+body {
+    text-align: center;
+    margin: 0px;
+    padding: 0px;
+    height: 100%;
+}
+.container{
+    text-align: center;
+    height: 100%;
+    margin: 0%;
+    padding: 0%;
+}
+h1{
+    margin-top: 16px;
+    padding: 8px;
+}
+.header{
+    margin-bottom: 32px;
+    margin-right: 0%;
+}
+.divBusca, .divCadastro{
+    background-color: aqua;
+    margin: 0%;
+    padding: 0%;
+    width: 50%;
+    height: 360px;
+    border: solid 2px #FFFF;
+}
+.section{
+    width: 100%;
+    margin: 0%;
+    padding: 0%;
+}
+footer{
+    margin-top: 32px;
+    text-align: center;
+}
+.ball{
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: blue;
+    margin-left: 16px;
+    margin-right: 16px;
+}
+footer .creditos{
+    margin: 16px;
+}
+.texto{
+    color: #FFFF;
+}
