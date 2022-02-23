@@ -7,68 +7,90 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;700&display=swap">
+
     <title>Sistema de cadastro</title>
 </head>
 
 <body>
     <div class="container">
-        <div class="jumbotron">
-            <h1 class="display-4">Sobre você</h1>
-            <p class="lead">Preencha o formulário com seus dados. (Etapa 1 de 3)</p>
-            <hr class="my-4">
-            <div class="">
-                <form method="get" action="arquivophp.php" class="">
-                    <div class="nome">
-                        <label for="nome" class="form-label">Nome</label>
-                        <input type="Name" class="form-control" id="nome">
+        <h1 class="display-6">Sobre você</h1>
+        <div class="">
+            <form method="POST" action="arquivophp.php" name="cadastro1">
+                <div class="nome">
+                    <label for="nome" class="form-label">Nome</label>
+                    <input type="Name" class="form-control" name="nome">
+                </div>
+                <div class="idade">
+                    <label for="idade" class="form-label">Idade</label>
+                    <input type="number" class="form-control" name="idade">
+                </div>
+                <div class="cpf">
+                    <label for="cpf" class="form-label">CPF</label>
+                    <input type="text" class="form-control" name="cpf">
+                </div>
+                <div class="rg">
+                    <label for="rg" class="form-label">RG</label>
+                    <input type="text" class="form-control" name="rg">
+                </div>
+                <div class="sexo">
+                    <label for="sexo" class="form-label">Sexo</label>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="sexoForm" id="masculino" value="masculino">
+                        <label class="form-check-label" for="masculino">Masculino</label>
                     </div>
-                    <div class="idade">
-                        <label for="idade" class="form-label">Idade</label>
-                        <input type="number" class="form-control" id="idade">
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="sexoForm" id="feminino" value="feminino">
+                        <label class="form-check-label" for="feminino">Feminino</label>
                     </div>
-                    <div class="cpf">
-                        <label for="cpf" class="form-label">CPF</label>
-                        <input type="text" class="form-control" id="cpf">
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="sexoForm" id="outro" value="outros">
+                        <label class="form-check-label" for="outro">Outro</label>
                     </div>
-                    <div class="rg">
-                        <label for="rg" class="form-label">RG</label>
-                        <input type="text" class="form-control" id="rg">
-                    </div>
-                    <div class="sexo">
-                        <label for="sexo" class="form-label">Sexo</label>
-                        <div class="form-check">
-                            <input class="form-check-input" type="radio" name="exampleRadios" id="masculino" value="masculino">
-                            <label class="form-check-label" for="masculino">
-                          cis/trans Masculino
-                        </label>
-                        </div>
-                        <div class="form-check">
-                            <input class="form-check-input" type="radio" name="exampleRadios" id="feminino" value="feminino">
-                            <label class="form-check-label" for="feminino">
-                              cis/trans Feminino
-                            </label>
-                        </div>
-                        <div class="form-check">
-                            <input class="form-check-input" type="radio" name="exampleRadios" id="naoBinario" value="naoBinario">
-                            <label class="form-check-label" for="naoBinario">
-                              Não binário
-                            </label>
-                        </div>
-                        <div class="form-check">
-                            <input class="form-check-input" type="radio" name="exampleRadios" id="outro" value="outros">
-                            <label class="form-check-label" for="outro">
-                              Outro
-                            </label>
-                        </div>
-                    </div>
-                    <div class="botaoProximo">
-                        <button type="submit" class="btn btn-primary" onclick="">Próximo</button>
-                    </div>
-                </form>
-            </div>
+                </div>
+                <input class="btn btn-primary" type="submit" onclick="return validar()"></input>
+            </form>
         </div>
     </div>
-    <script type="text/javascript" src="script.js"></script>
+    <script type="text/javascript">
+        function validar() {
+
+            var nome = cadastro1.nome.value;
+            var idade = cadastro1.idade.value;
+            var cpf = cadastro1.cpf.value;
+            var rg = cadastro1.rg.value;
+            var sexo = cadastro1.sexoForm.value;
+
+            if (nome.value == "") {
+                alert("Nome não informado.");
+                cadastro1.nome.focus();
+                return false;
+            }
+            if (idade.value == "") {
+                alert("Idade não programada.");
+                cadastro1.idade.focus();
+                return false;
+            }
+            if (cpf.value == "") {
+                alert("CPF não informado.");
+                cadastro1.cpf.focus();
+                return false;
+            }
+            if (rg.value == "") {
+                alert("RG não informado.");
+                cadastro1.rg.focus();
+                return false;
+            }
+            if (sexo.value == "") {
+                alert("Sexo não informado.");
+                cadastro1.sexo.focus();
+                return false;
+            }
+            alert("Formulário enviado.");
+            window.location.href = "http://127.0.0.1:5500/site/cadastro2.html";
+
+        }
+    </script>
 </body>
 
 </html>
