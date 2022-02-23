@@ -1,52 +1,76 @@
+:root {
+    --main-bg-color: #121212;
+    --main-bg-border: #262626;
+    --main-header-color: #E9E9E9;
+    --main-subheader-color: #C8C8C8;
+}
 
 body {
     text-align: center;
     margin: 0px;
     padding: 0px;
     height: 100%;
+    background-color: var(--main-bg-color);
 }
-.container{
+
+.container {
     text-align: center;
     height: 100%;
     margin: 0%;
     padding: 0%;
 }
-h1{
+
+h1 {
+    color: var(--main-header-color);
     margin-top: 16px;
     padding: 8px;
 }
-.header{
+
+.header {
+    color: var(--main-subheader-color);
     margin-bottom: 32px;
     margin-right: 0%;
 }
-.divBusca, .divCadastro{
-    background-color: aqua;
+
+.divBusca,
+.divCadastro {
+    background-color: #c4c4c4;
     margin: 0%;
     padding: 0%;
     width: 50%;
-    height: 360px;
-    border: solid 2px #FFFF;
+    height: 340px;
+    border: solid 2px #000000;
+    display: flex;
+    align-items: center;
+    justify-content: center
 }
-.section{
+
+.section {
     width: 100%;
     margin: 0%;
     padding: 0%;
 }
-footer{
-    margin-top: 32px;
+
+footer {
+    color: var(--main-subheader-color);
     text-align: center;
 }
-.ball{
+
+.ball {
     width: 60px;
     height: 60px;
     border-radius: 50%;
-    background-color: blue;
+    background-color: #c4c4c4;
     margin-left: 16px;
     margin-right: 16px;
 }
-footer .creditos{
+
+footer .creditos {
     margin: 16px;
 }
-.texto{
-    color: #FFFF;
+
+.texto {
+    color: var(--main-header-color);
+    width: 6em;
+    background: #121212;
 }
