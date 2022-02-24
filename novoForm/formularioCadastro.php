@@ -18,10 +18,6 @@ $endereco = $_GET["endereco"];
 $email = isset($_GET["email"])?$_GET["email"]:["não informado"];
 $celular = $_GET["celular"];
 
-      
-
-
-
 function validaCPF($cpf) {
       
       $cpf = preg_replace( '/[^0-9]/is', '', $cpf );
@@ -45,11 +41,6 @@ function validaCPF($cpf) {
       }
       return true;
 }
-
-
-
-
-
 
 if( validaCPF($cpf) ){
       
