@@ -79,6 +79,7 @@ input~label {
 
 input:focus~label,
 input:valid~label {
+    background-color: var(--light-color);
     transform: translateY(-24px);
     font-size: 0.8em;
     letter-spacing: 0.1em;
@@ -175,4 +176,12 @@ input#search-bar {
     font-size: 1em;
     margin-bottom: 24px;
     position: relative;
+}
+
+.success input {
+    outline: 3px solid green;
+}
+
+.error input {
+    outline: 3px solid red;
 }

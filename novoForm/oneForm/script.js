@@ -1,59 +1,48 @@
-const form = document.getElementById('form')
-const username = document.getElementById('nome')
-const email = document.getElementById('email')
-const password = document.getElementById('password')
+const form = document.getElementById('form');
+const nome = document.getElementById('nome');
+const cpf = document.getElementById('cpf');
+const rg = document.getElementById('rg');
+const idade = document.getElementById('idade');
+const sexo = document.getElementById('sexo');
+const cidade = document.getElementById('cidade');
+const endereco = document.getElementById('endereco');
+const email = document.getElementById('email');
+const celular = document.getElementById('celular');
 
-form.addEventListener('submit', (e) => {
-    e.preventDefault()
 
-    checkInputs()
 
+form.addEventListener('submit', (e) =>{
+    e.preventDefault();
+
+    checkInputs();
+    
 })
 
-function checkInputs() {
-    const usernameValue = username.value.trim()
-    const emailValue = email.value.trim()
-    const passwordValue = password.value.trim()
+
+function checkInputs(){
+    const nomeValue = nome.value.trim();
+    const cpfValue = cpf.value.trim();
+    const rgValue = rg.value.trim();
+    const idadeValue = idade.value.trim();
+    const sexoValue = sexo.value.trim();
+    const cidadeValue = cidade.value.trim();
+    const enderecoValue = endereco.value.trim();
+    const emailValue = email.value.trim();
+    const celularValue = celular.value.trim();
 
 
-    if (usernameValue === '') {
-        //mostrar o erro
-        //adicionar classe error
-        errorValidation(username, 'Preencha esse campo')
-    } else {
-        //adicionar a classe sucesso
-        successValidation(username)
+    if(nomeValue == ''){
+        setErrorFor(nome);
+    }else{
+        setSuccessFor(nome);
     }
-    if (emailValue === '') {
-        errorValidation(email, 'Preencha esse campo')
-    } else {
-        successValidation(email)
 
-    }
-    if (passwordValue === '') {
-        errorValidation(password, 'Preencha esse campo')
-    } else if (passwordValue.length < 8) {
-        errorValidation(password, 'A senha deve ter + de 8 caracteres')
-    } else {
-        successValidation(password)
-    }
 
 }
 
-function errorValidation(input, message) {
+
+function setErrorFor(input){
     const formControl = input.parentElement;
-    const small = formControl.querySelector('small')
 
-    small.innerText = message
-
-    formControl.className = 'form-control error'
-
-
-
-}
-
-function successValidation(input) {
-    const formControl = input.parentElement
-
-    formControl.className = 'form-control success'
+    formControl.className = ' input error';
 }
