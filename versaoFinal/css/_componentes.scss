@@ -1,0 +1,129 @@
+.form{
+    margin-top: 64px;
+    position: relative;
+    height: 100%;
+    display: grid;
+    .input{
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border: 2px solid $border;
+        outline: none;
+        padding: 1.5rem;
+        background: none;
+        font-size: 1em;
+        color: $text-color;
+        &:hover{
+            border-color: $primary-light-color;
+        }
+        &:focus{
+            border-color: $primary-color;
+        }
+    }
+    .label{
+        position: absolute;
+        left: 1rem;
+        top: 0.8rem;
+        padding: 0 5px;
+        color: #a9a6aa;
+        cursor: text;
+        transition: top 200ms ease-in,
+        left 200ms ease-in,
+        font-size 200ms ease-in;
+        background-color: $bg-secundary-color;
+    }
+}
+.input:focus ~ .label{
+    top: -10px;
+    font-size: 0.8rem;
+    left: 0.8rem;
+}
+.input:focus ~ .label,
+.input:not(:placeholder-shown).input:not(:focus) ~ .label {
+  top: -0.5rem;
+  font-size: 0.8rem;
+  left: 0.8rem;
+}
+
+.botaoOutline {
+    margin-top: 16px;
+    text-align: center;
+    text-decoration: none;
+    display: block;
+    width: auto;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    width: 100%;
+    padding: 8px 0;
+    border-radius: 10px;
+    border: none;
+    border: 2px solid $primary-color;
+    color: $text-color;
+    font-size: 1em;
+    &:hover{
+        color: $text-color;
+        background-color: $primary-light-color;
+    }
+    &:active{
+        color: $text-color;
+        background-color: $primary-dark-color;
+    }
+}
+
+.botaoSolid {
+    text-align: center;
+    text-decoration: none;
+    display: block;
+    width: auto;
+    margin-top: 16px;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    width: 100%;
+    padding: 8px 0;
+    border-radius: 10px;
+    border: none;
+    border: 2px solid $primary-color;
+    color: $text-color;
+    font-size: 1em;
+    background-color: $primary-color;
+    &:hover{
+        color: $text-color;
+        background-color: $primary-light-color;
+    }
+    &:active{
+        color: $text-color;
+        background-color: $primary-dark-color;
+    }
+}
+.form-select {
+    width: 100%;
+    padding: 12px 16px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border: none;
+    border: 2px solid $primary-color;
+    background-color: #EAEAEA;
+    outline: none;
+}
+.cardResultado{
+    border-radius: 10px;
+    width: 100%;
+    height: 100%;
+    border: 2px solid $border;
+    outline: none;
+    padding: 1.5rem;
+    background: none;
+    background-color: aqua;
+    font-size: 1em;
+    color: $text-color;
+    &:hover{
+        border-color: $primary-light-color;
+    }
+    &:focus{
+        border-color: $primary-color;
+    }
+}

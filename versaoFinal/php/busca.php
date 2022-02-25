@@ -7,7 +7,7 @@
     <title>Cadastro</title>
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-    <link rel="stylesheet" type="text/css" href="./css/main.css">
+    <link rel="stylesheet" type="text/css" href="../css/main.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;700&display=swap">
 
     <script src="./scripts/main.js" defer></script>
@@ -15,13 +15,14 @@
 
 <body>
 
-
     <div class="container">
-        <h2>Banco de dados da RioGamer</h2>
-        <p>Você deseja realizar uma pesquisa ou fazer um cadastro?</p>
-        <hr size="">
-        <a class="btn btn-dark a" href="busca.html">Fazer uma pesquisa</a>
-        <a class="btn btn-dark a" href="oneForm.php">Fazer um cadastro</a>
+        <h4>Digite a matrícula que deseja procurar</h4>
+        <form autocomplete="off" action="busca.php" method="post">
+            <input class="form-control" type="search"  aria-label="Search" name="busca">
+            <button type="button" class="botaoSolid">Buscar</button>
+
+        </form>
+
     </div>
 </body>
 
