@@ -31,6 +31,7 @@
                 </thead>
                 <tbody>
                   <?php
+                    include 'conexao.php';
                     include 'testeBusca.php';
                   ?>  
                 </tbody>
