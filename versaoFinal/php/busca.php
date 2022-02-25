@@ -29,6 +29,11 @@
                         <th>nome</th>
                     </tr>
                 </thead>
+                <tbody>
+                  <?php
+                    include_once 'read.php';
+                  ?>  
+                </tbody>
         </div>
     </div>
 </body>
