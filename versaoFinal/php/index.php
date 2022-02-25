@@ -1,5 +1,5 @@
+<?php session_start(); ?>
 <?php
-
         include "conexao.php";
 
         $sql = "SELECT * FROM matricula";
@@ -56,6 +56,7 @@
 
             if($affected_rows > 0):
                 header("Location:../pages/form.html");
+                echo" cadastro criado com sucesso";
             endif;
 
         }
