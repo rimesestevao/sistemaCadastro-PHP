@@ -5,6 +5,8 @@ include_once 'conexao.php';
 $sql = "SELECT * FROM matricula";
 $consulta = mysqli_query($link,$sql);
 $busca = mysqli_num_rows($consulta);
+
+mysqli_close($link);
 ?>
 
 <!DOCTYPE html>
@@ -30,15 +32,13 @@ $busca = mysqli_num_rows($consulta);
             <input class="form-control" type="search"  aria-label="Search" name="busca">
             <button type="submit" class="botaoSolid">Buscar</button>
 
-            <?php
-
-            print "$busca registos encontrados.";
-
-            ?>
-
         </form>
         <div class="cardResultado">
         
+            <?php
+                print "$busca registos encontrados.";
+            ?>
+
         </div>
     </div>
 </body>
