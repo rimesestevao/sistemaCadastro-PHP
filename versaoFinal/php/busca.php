@@ -31,10 +31,10 @@
                 </thead>
                 <tbody>
                   <?php
-                    include 'conexao.php';
                     include 'testeBusca.php';
                   ?>  
                 </tbody>
+            </table>
         </div>
     </div>
 </body>
