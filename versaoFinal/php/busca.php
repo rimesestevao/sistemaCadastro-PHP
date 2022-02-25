@@ -22,6 +22,14 @@
             <button type="button" class="botaoSolid">Buscar</button>
 
         </form>
+        <div class="cardResultado">
+            <table class="striped" >
+                <thead>
+                    <tr>
+                        <th>nome</th>
+                    </tr>
+                </thead>
+        </div>
     </div>
 </body>
 
