@@ -2,9 +2,11 @@
 
 include 'conexao.php';
 
-$querySelect = $link->query("select * from matricula where matricula = '$nome'");
+$pesquisar = $_POST['busca'];
+$result_matricula = "SELECT * from matricula where matricula like '$pesquisar'";
+$result_matricula = mysqli_query ($link, $result_matricula);
 
-while ($registro = $querySelect->fetch_assoc()):
+while ($registro = $result_matricula->fetch_assoc()):
     $matricula = $registro['matricula'];
     $nome = $registro['nome'];
     $idade = $registro['idade'];
