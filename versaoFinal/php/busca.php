@@ -19,7 +19,7 @@
         <h4>Digite a matrícula que deseja procurar</h4>
         <form autocomplete="off" action="mostrarConsulta.php" method="post">
             <input class="form-control" type="search"  aria-label="Search" name="busca">
-            <button type="submit" class="botaoSolid">Buscar</button>
+            <button type="button" class="botaoSolid">Buscar</button>
 
         </form>
         <div class="cardResultado">
