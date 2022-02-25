@@ -6,7 +6,7 @@ $matricula = filter_input(INPUT_GET, 'matricula', FILTER_SANITIZE_NUMBER_INT);
 $querySelect = $link->query("select * from matricula where matricula = '$matricula'");
 
 while ($registro = $querySelect->fetch_assoc()):
-    $matricula = $rowcount + 1;
+    $matricula = $registro['matricula'];
     $nome = $registro['nome'];
     $idade = $registro['idade'];
     $cpf = $registro['cpf'];
