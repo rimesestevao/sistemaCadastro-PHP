@@ -55,7 +55,7 @@
             mysqli_close($link);
 
             if($affected_rows > 0):
-                header("Location:../");
+                header("Location:../pages/form.html");
             endif;
 
         }
