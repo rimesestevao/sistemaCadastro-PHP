@@ -22,6 +22,11 @@
             <button type="button" class="botaoSolid">Buscar</button>
 
         </form>
+        <div class="cardResultado">
+            <?php 
+                include_once 'mostrarConsulta.php';
+            ?>
+        </div>
     </div>
 </body>
 
