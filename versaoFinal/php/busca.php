@@ -23,7 +23,22 @@
 
         </form>
         <div class="cardResultado">
-            
+            <div class="col s12">
+                <h5 class="ligth">Resultado</h5><hr>
+
+                <table class="striped">
+                    <thead>
+                        <tr>
+                            <th>Nome</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <?php
+                            include_once 'mostrarConsulta.php';
+                        ?>
+                    </tbody>
+                </table>
+            </div>
         </div>
     </div>
 </body>
