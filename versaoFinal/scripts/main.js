@@ -86,7 +86,9 @@ function checkInputs(){
         setSuccessFor("celular");
     }
 
-
+    if(celularValue ||emailValue ||enderecoValue ||cidadeValue ||sexoValue ||idadeValue ||rgValue ||cpfValue ||nomeValue != 0){
+        document.getElementById("form").submit();
+    }
 }
 
 
@@ -134,3 +136,14 @@ function mascara(i,t){
         }
     }
  }
+
+
+
+ let form = doxument.getElementById('form');
+
+let nome = form.elements['nome'];
+let nomeValidar = nome.value;
+
+function requireValue(input) {
+    return !(input.value.trim() === '');
+}
