@@ -23,18 +23,12 @@
 
         </form>
         <div class="cardResultado">
-<<<<<<< HEAD
             <table class="striped" >
                 <thead>
                     <tr>
                         <th>nome</th>
                     </tr>
                 </thead>
-=======
-            <?php 
-                include_once 'mostrarConsulta.php';
-            ?>
->>>>>>> 2bea9ab361ecd79b8399196e0b691024083e7570
         </div>
     </div>
 </body>
