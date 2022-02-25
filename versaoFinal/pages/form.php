@@ -108,6 +108,9 @@
         $email = isset($_GET["email"])?$_GET["email"]:["não informado"];
         $celular = $_GET["celular"];
 
+    echo" o nome é $nome";
+
+
         function validaCPF($cpf) {
             
             $cpf = preg_replace( '/[^0-9]/is', '', $cpf );
