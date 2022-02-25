@@ -22,7 +22,6 @@
             <button type="button" class="botaoSolid">Buscar</button>
 
         </form>
-
     </div>
 </body>
 

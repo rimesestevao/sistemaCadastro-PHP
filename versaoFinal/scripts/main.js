@@ -123,7 +123,7 @@ function mascara(i,t){
     if(t == "tel"){
         if(v[0] == 9){
            i.setAttribute("maxlength", "12");
-           if (v.length == 0) i.value += ")";
+           if (v.length == 0) i.value += "(";
            if (v.length == 3) i.value += ")";
            if (v.length == 6) i.value += "-";
         }else{
