@@ -3,7 +3,7 @@
 include "conexao.php";
 
 $sql = "SELECT * FROM matricula";
-if ($result=mysqli_query($conn,$sql)) {
+if ($result=mysqli_query($link,$sql)) {
     $rowcount=mysqli_num_rows($result);
 }
 
@@ -46,12 +46,12 @@ if( validaCPF($cpf) ){
       
       $sql = "INSERT INTO matricula (matricula, nome, idade, cpf, rg, sexo, cidade, endereco, email, celular) VALUES ('$matricula','$nome', '$idade', '$cpf', '$rg', '$sexo', '$cidade', '$endereco', '$email', '$celular')";
 
-      if (mysqli_query($conn, $sql)) {
+      if (mysqli_query($link, $sql)) {
             echo "New record created successfully";
       } else {
-            echo "Error: " . $sql . "<br>" . mysqli_error($conn);
+            echo "Error: " . $sql . "<br>" . mysqli_error($link);
       }
-      mysqli_close($conn);
+      mysqli_close($link);
 
 }
 else{
