@@ -3,24 +3,20 @@
 include "conexao.php";
 
 $sql = "SELECT * FROM matricula";
-if ($result=mysqli_query($conn,$sql)) {
+if ($result=mysqli_query($link,$sql)) {
     $rowcount=mysqli_num_rows($result);
 }
 
 $matricula = $rowcount + 1;
-$nome = $_GET["nome"];
-$idade = $_GET["idade"];
-$cpf = $_GET["cpf"];
-$rg = $_GET["rg"];
-$sexo = $_GET["sexo"];
-$cidade = $_GET["cidade"];
-$endereco = $_GET["endereco"];
-$email = isset($_GET["email"])?$_GET["email"]:["não informado"];
-$celular = $_GET["celular"];
-
-      
-
-
+$nome = filter_input(INPUT_POST, 'nome', FILTER_SANITIZE_SPECIAL_CHARS);
+$idade = filter_input(INPUT_POST, 'idade', FILTER_SANITIZE_NUMBER_INT);
+$cpf = filter_input(INPUT_POST, 'cpf', FILTER_SANITIZE_NUMBER_INT);
+$rg = filter_input(INPUT_POST, 'rg', FILTER_SANITIZE_NUMBER_INT);
+$sexo = filter_input(INPUT_POST, 'sexo', FILTER_SANITIZE_SPECIAL_CHARS);
+$cidade = filter_input(INPUT_POST, 'cidade', FILTER_SANITIZE_SPECIAL_CHARS);
+$endereco = filter_input(INPUT_POST, 'enereco', FILTER_SANITIZE_SPECIAL_CHARS);
+$email = filter_input(INPUT_POST, 'email', FILTER_VALIDATE_EMAIL);
+$celular = filter_input(INPUT_POST, 'celular', FILTER_SANITIZE_NUMBER_INT);
 
 function validaCPF($cpf) {
       
@@ -55,12 +51,12 @@ if( validaCPF($cpf) ){
       
       $sql = "INSERT INTO matricula (matricula, nome, idade, cpf, rg, sexo, cidade, endereco, email, celular) VALUES ('$matricula','$nome', '$idade', '$cpf', '$rg', '$sexo', '$cidade', '$endereco', '$email', '$celular')";
 
-      if (mysqli_query($conn, $sql)) {
+      if (mysqli_query($link, $sql)) {
             echo "New record created successfully";
       } else {
-            echo "Error: " . $sql . "<br>" . mysqli_error($conn);
+            echo "Error: " . $sql . "<br>" . mysqli_error($link);
       }
-      mysqli_close($conn);
+      mysqli_close($link);
 
 }
 else{
