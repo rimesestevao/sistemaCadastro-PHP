@@ -98,15 +98,15 @@
         }
 
         $matricula = $rowcount + 1;
-        $nome = filter_input(INPUT_POST, 'nome', FILTER_SANITIZE_SPECIAL_CHARS);
-        $idade = filter_input(INPUT_POST, 'idade', FILTER_SANITIZE_NUMBER_INT);
-        $cpf = filter_input(INPUT_POST, 'cpf', FILTER_SANITIZE_NUMBER_INT);
-        $rg = filter_input(INPUT_POST, 'rg', FILTER_SANITIZE_NUMBER_INT);
-        $sexo = filter_input(INPUT_POST, 'sexo', FILTER_SANITIZE_SPECIAL_CHARS);
-        $cidade = filter_input(INPUT_POST, 'cidade', FILTER_SANITIZE_SPECIAL_CHARS);
-        $endereco = filter_input(INPUT_POST, 'enereco', FILTER_SANITIZE_SPECIAL_CHARS);
-        $email = filter_input(INPUT_POST, 'email', FILTER_VALIDATE_EMAIL);
-        $celular = filter_input(INPUT_POST, 'celular', FILTER_SANITIZE_NUMBER_INT);
+        $nome = $_GET["nome"];
+        $idade = $_GET["idade"];
+        $cpf = $_GET["cpf"];
+        $rg = $_GET["rg"];
+        $sexo = $_GET["sexo"];
+        $cidade = $_GET["cidade"];
+        $endereco = $_GET["endereco"];
+        $email = isset($_GET["email"])?$_GET["email"]:["não informado"];
+        $celular = $_GET["celular"];
 
         function validaCPF($cpf) {
             
@@ -131,11 +131,6 @@
             }
             return true;
         }
-
-
-
-
-
 
         if( validaCPF($cpf) ){
             
