@@ -2,9 +2,9 @@
 
 include_once 'conexao.php'; 
 
-$sql = "SELECT * FROM matricula";
-$consulta = mysqli_query($link,$sql);
-$busca = mysqli_num_rows($consulta);
+$pesquisar = $_POST['busca'];
+$result_matricula = "SELECT * from matricula where matricula like '$pesquisar'";
+$result_matricula = mysqli_query ($link, $result_matricula);
 
 mysqli_close($link);
 ?>
