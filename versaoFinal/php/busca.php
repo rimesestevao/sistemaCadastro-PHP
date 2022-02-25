@@ -2,7 +2,7 @@
 
 include_once 'conexao.php'; 
 
-$sql = "SELECT nome FROM matricula where nome like matricula";
+$sql = "SELECT * FROM matricula";
 $consulta = mysqli_query($link,$sql);
 $busca = mysqli_num_rows($consulta);
 ?>
