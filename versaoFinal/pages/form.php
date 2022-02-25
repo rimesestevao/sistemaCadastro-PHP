@@ -90,7 +90,7 @@
     </div>
     <?php
 
-        include "conexao.php";
+        include "../php/conexao.php";
 
         $sql = "SELECT * FROM matricula";
         if ($result=mysqli_query($link,$sql)) {
