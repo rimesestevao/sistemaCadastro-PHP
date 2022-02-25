@@ -17,7 +17,7 @@ while ($registro = $querySelect->fetch_assoc()):
     $celular = $_GET['celular'];
 
     echo"<tr>";
-    echo"<td>$matricula</td><td>$nome</td><td>$idade</td><td>$cpf</td><td>$rg</td><td>$sexo</td><td>$cidade</td><td>$endereco</td><td>$email</td><td>$celular</td><td><a herf='edicao?id=$matricula'><i > editar</i></td><td><a href='delet?id=$id'><i >deletar</i></td>";
+    echo"<td>$matricula</td><td>$nome</td><td>$idade</td><td>$cpf</td><td>$rg</td><td>$sexo</td><td>$cidade</td><td>$endereco</td><td>$email</td><td>$celular</td><td><a herf='edicao.php?id=$matricula'><i > editar</i></td><td><a href='delete.php?id=$id'><i >deletar</i></td>";
 
 endwhile
 
