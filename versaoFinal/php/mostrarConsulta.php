@@ -2,7 +2,7 @@
 
 include 'conexao.php';
 
-$querySelect = $link->query("select * from matricula where matricula = '$pesquisar'");
+$querySelect = $link->query("select * from matricula where matricula = '$matricula'");
 
 while ($registro = $querySelect->fetch_assoc()):
     $matricula = $registro['matricula'];
