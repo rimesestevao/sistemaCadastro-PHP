@@ -17,24 +17,13 @@
 
     <div class="container">
         <h4>Digite a matrícula que deseja procurar</h4>
-        <form autocomplete="off" action="busca.php" method="get">
+        <form autocomplete="off" action="mostraConsulta.php" method="get">
             <input class="form-control" type="search"  aria-label="Search" name="busca">
             <button type="submit" class="botaoSolid">Buscar</button>
 
         </form>
         <div class="cardResultado">
-            <table class="striped" >
-                <thead>
-                    <tr>
-                        <th>nome</th>
-                    </tr>
-                </thead>
-                <tbody>
-                  <?php
-                    include 'mostrarConsulta.php';
-                  ?>  
-                </tbody>
-            </table>
+            
         </div>
     </div>
 </body>
