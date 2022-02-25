@@ -115,9 +115,9 @@
     height: 100%;
     border: 2px solid $border;
     outline: none;
-    padding: 1.5rem;
+    padding: 60px;
     background: none;
-    background-color: aqua;
+    background-color: $primary-color;
     font-size: 1em;
     color: $text-color;
     &:hover{
