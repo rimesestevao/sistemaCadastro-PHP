@@ -3,7 +3,7 @@
 include_once 'conexao.php'; 
 
 $pesquisar = $_POST['busca'];
-$result_matricula = "SELECT * from matricula where matricula like '$pesquisar'";
+$result_matricula = "SELECT * from matricula where $matricula like '$pesquisar'";
 $result_matricula = mysqli_query ($link, $result_matricula);
 
 mysqli_close($link);
@@ -28,7 +28,7 @@ mysqli_close($link);
 
     <div class="container">
         <h4>Digite a matrícula que deseja procurar</h4>
-        <form autocomplete="off" action="mostraConsulta.php" method="post">
+        <form autocomplete="off" action="" method="post">
             <input class="form-control" type="search"  aria-label="Search" name="busca">
             <button type="submit" class="botaoSolid">Buscar</button>
 
