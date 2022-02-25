@@ -36,7 +36,7 @@ mysqli_close($link);
         <div class="cardResultado">
         
             <?php
-                print "$busca registos encontrados.";
+                print "$result_matricula registos encontrados.";
             ?>
 
         </div>
