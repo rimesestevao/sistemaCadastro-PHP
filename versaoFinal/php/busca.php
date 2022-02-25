@@ -31,7 +31,7 @@
                 </thead>
                 <tbody>
                   <?php
-                    include 'testeBusca.php';
+                    include 'mostraConsulta.php';
                   ?>  
                 </tbody>
         </div>
