@@ -1,3 +1,12 @@
+<?php 
+
+include_once 'conexao.php'; 
+
+$sql = "SELECT nome FROM matricula where nome like matricula";
+$consulta = mysqli_query($link,$sql);
+$busca = mysqli_num_rows($consulta);
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -21,24 +30,15 @@
             <input class="form-control" type="search"  aria-label="Search" name="busca">
             <button type="submit" class="botaoSolid">Buscar</button>
 
+            <?php
+
+            print "$busca registos encontrados.";
+
+            ?>
+
         </form>
         <div class="cardResultado">
-            <div class="col s12">
-                <h5 class="ligth">Resultado</h5><hr>
-
-                <table class="striped">
-                    <thead>
-                        <tr>
-                            <th>Nome</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <?php
-                            include_once 'mostrarConsulta.php';
-                        ?>
-                    </tbody>
-                </table>
-            </div>
+        
         </div>
     </div>
 </body>
