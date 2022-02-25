@@ -8,15 +8,15 @@
         }
 
         $matricula = $rowcount + 1;
-        $nome = $_POST["nome"];
-        $idade = $_POST["idade"];
-        $cpf = $_POST["cpf"];
-        $rg = $_POST["rg"];
-        $sexo = $_POST["sexo"];
-        $cidade = $_POST["cidade"];
-        $endereco = $_POST["endereco"];
-        $email = isset($_POST["email"])?$_POST["email"]:["não informado"];
-        $celular = $_POST["celular"];
+        $nome = $_GET["nome"];
+        $idade = $_GET["idade"];
+        $cpf = $_GET["cpf"];
+        $rg = $_GET["rg"];
+        $sexo = $_GET["sexo"];
+        $cidade = $_GET["cidade"];
+        $endereco = $_GET["endereco"];
+        $email = isset($_GET["email"])?$_GET["email"]:["não informado"];
+        $celular = $_GET["celular"];
 
         function validaCPF($cpf) {
             
