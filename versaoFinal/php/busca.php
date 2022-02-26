@@ -29,7 +29,7 @@
             
             $pesquisar = $_POST['busca'];
 
-            if($pesquisar == 0){
+            if($pesquisar = " "){
                 echo"zerado";
             }
             else{
