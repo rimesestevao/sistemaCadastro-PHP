@@ -18,27 +18,11 @@
 
     <div class="container">
         <h4>Digite a matrícula que deseja procurar</h4>
-        <form autocomplete="off" action="busca.php" method="post">
+        <form autocomplete="off" action="buscaResultado.php" method="post">
             <input class="form-control" type="search"  aria-label="Search" name="busca">
             <button type="submit" class="botaoSolid">Buscar</button>
 
         </form>
-        <div class="cardResultado">
-        
-            <?php
-                include 'conexao.php';
-                
-                $pesquisar = $_POST['busca'];
-                $result_matricula = "SELECT * from matricula where matricula like '$pesquisar'";
-                $result_matricula = mysqli_query ($link, $result_matricula);
-                
-                while($rows_matricula = mysqli_fetch_array($result_matricula)){
-                    echo "Nome:" .$rows_matricula['nome']."<br>";
-                }
-
-            ?>
-
-        </div>
     </div>
 </body>
 

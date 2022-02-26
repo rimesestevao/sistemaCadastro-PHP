@@ -23,7 +23,7 @@
             <button type="submit" class="botaoSolid">Buscar</button>
 
         </form>
-        <div class="cardResultado">
+        <div class="cardResultado mt-3">
         
             <?php
                 include 'conexao.php';
