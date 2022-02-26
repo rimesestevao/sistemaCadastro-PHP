@@ -10,14 +10,14 @@
     <link rel="stylesheet" type="text/css" href="../css/main.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;700&display=swap">
 
-    <script src="../scripts/busca.js" defer></script>
+    <script src="../scripts/main.js" defer></script>
 </head>
 
 <body>
 
     <div class="container">
         <h4>Digite a matrícula que deseja procurar</h4>
-        <form autocomplete="off" action="busca.php" method="post">
+        <form autocomplete="off" action="testeBusca.php" method="post">
             <input class="form-control" type="search"  aria-label="Search" name="busca">
             <button type="submit" class="botaoSolid">Buscar</button>
 

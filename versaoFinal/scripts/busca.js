@@ -1,4 +1,4 @@
 var form = document.querySelector('form');
-form.addEventListener('submit', function(e)){
+form.addEventListener('submit', function (e) {
     e.preventDefault();
-}
+})
