@@ -10,7 +10,7 @@
     <link rel="stylesheet" type="text/css" href="../css/main.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;700&display=swap">
 
-    <script src="../scripts/main.js" defer></script>
+    <script src="../scripts/busca.js" defer></script>
 </head>
 
 <body>
