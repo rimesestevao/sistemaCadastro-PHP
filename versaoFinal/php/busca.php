@@ -1,3 +1,6 @@
+<?php session_start(); ?>
+
+
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -35,7 +38,7 @@
             
             $querySelect = $link->query("select * from matricula where matricula = '$pesquisar'");
 
-            while ($registro = $querySelect->fetch_assoc()):
+            while ($registro = $querySelect ->fetch_assoc()):
                 $matricula = $registro['matricula'];
                 $nome = $registro['nome'];
                 $idade = $registro['idade'];
