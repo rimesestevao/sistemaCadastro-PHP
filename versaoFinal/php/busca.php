@@ -19,9 +19,8 @@
     <div class="container">
         <h4>Digite a matrícula que deseja procurar</h4>
         <form autocomplete="off" action="testeBusca.php" method="post">
-            <input class="form-control" type="search"  aria-label="Search" name="busca">
+            <input class="form-control me-2" type="search"  aria-label="Search" name="busca">
             <button type="submit" class="botaoSolid">Buscar</button>
-
         </form>
     </div>
 </body>
