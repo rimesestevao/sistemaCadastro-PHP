@@ -3,7 +3,7 @@
     
     $pesquisar = $_POST['busca'];
 
-    echo"$pesquisar";
+    echo"<br>$pesquisar<br>";
 
     $result_matricula = "SELECT * from matricula where matricula like '$pesquisar'";
     $result_matricula = mysqli_query ($link, $result_matricula);
