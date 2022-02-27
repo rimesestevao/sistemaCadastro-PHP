@@ -109,21 +109,31 @@
     background-color: #EAEAEA;
     outline: none;
 }
-.cardResultado{
-    border-radius: 10px;
+.cardResultado {
+    text-align: center;
+    text-decoration: none;
+    display: block;
+    width: auto;
+    margin-top: 16px;
+    -moz-appearance: none;
+    -webkit-appearance: none;
     width: 100%;
-    height: 100%;
-    border: 2px solid $border;
-    outline: none;
-    padding: 60px;
-    background: none;
-    background-color: $primary-color;
-    font-size: 1em;
+    padding: 8px 0;
+    border-radius: 10px;
+    border: none;
+    border: 2px solid $primary-color;
     color: $text-color;
+    font-size: 1em;
+    background-color: $primary-color;
+    height: 72px;
+    max-width: 500px;
+    position: relative;
     &:hover{
-        border-color: $primary-light-color;
+        color: $text-color;
+        background-color: $primary-light-color;
     }
-    &:focus{
-        border-color: $primary-color;
+    &:active{
+        color: $text-color;
+        background-color: $primary-dark-color;
     }
 }
