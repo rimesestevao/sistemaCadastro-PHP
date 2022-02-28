@@ -2,7 +2,7 @@
 
 include 'conexao.php';
 
-$matricula = filter_input(INPUT_GET, 'matricula', FILTER_SANITIZE_NUMBER_INT);
+$matricula = filter_input(INPUT_POST, 'matricula', FILTER_SANITIZE_NUMBER_INT);
 $querySelect = $link->query("select * from matricula where matricula = '$matricula'");
 
 while ($registro = $querySelect->fetch_assoc()):
