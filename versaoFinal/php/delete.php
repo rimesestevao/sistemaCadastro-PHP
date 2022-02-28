@@ -2,7 +2,7 @@
 
 include 'conexao.php';
 
-$matricula = $_POST['busca'];
+$matricula = 1;
 $result_usuario = "Delete FROM matricula WHERE matricula='$matricula'";
 $result_usuario = mysqli_query($link, $result_usuario);
 
