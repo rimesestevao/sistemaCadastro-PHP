@@ -32,8 +32,6 @@ $_SESSION["newsession"];
             include 'conexao.php';
             
             $pesquisar = $_POST['busca'];
-
-
             
             $querySelect = $link->query("select * from matricula where matricula = '$pesquisar'");
 

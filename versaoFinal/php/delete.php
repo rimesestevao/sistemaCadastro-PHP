@@ -2,11 +2,8 @@
 
 include 'conexao.php';
 
-$matricula = filter_input(INPUT_GET, 'matricula', FILTER_SANITIZE_NUMBER_INT);
-$queryDelete = $link->query("delete from matricula where matricula='$matricula'");
+$matricula = 3;
+$result_usuario = "Delete FROM matricula WHERE matricula='$matricula'";
+$result_usuario = mysqli_query($link, $result_usuario);
 
-if(mysqli_affected_rows($link) > 0):
-    header("busca.php");
-
-endif;
 ?>
