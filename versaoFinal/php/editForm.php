@@ -40,7 +40,7 @@ include 'conexao.php';
 
 <body>
     <div class="container">
-        <form autocomplete="off" id="form" action="../php/index.php" method="get">
+        <form autocomplete="off" id="form" action="edicao.php" method="post">
             <h2>
                 Cadastro da providência
             </h2>
