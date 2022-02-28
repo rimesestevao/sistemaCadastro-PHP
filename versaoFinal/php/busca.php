@@ -32,7 +32,6 @@ $_SESSION["newsession"];
             include 'conexao.php';
             
             $pesquisar = $_POST['busca'];
-            $_COOKIE['matricula'] = $pesquisar;
             
             $querySelect = $link->query("select * from matricula where matricula = '$pesquisar'");
 

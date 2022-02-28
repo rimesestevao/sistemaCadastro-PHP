@@ -1,11 +1,11 @@
 <?php
 
 include 'conexao.php';
+include 'busca.php';
 
-//$matricula = $_REQUEST['pesquisar'];
-$matricula= $_COOKIE['matricula'];
-echo "$matricula";
-$result_usuario = "Delete FROM matricula WHERE matricula='$matricula'";
+//$pesquisar = $_REQUEST['pesquisar'];
+echo "$pesquisar";
+$result_usuario = "Delete FROM matricula WHERE matricula='$pesquisar'";
 $result_usuario = mysqli_query($link, $result_usuario);
 
 ?>
