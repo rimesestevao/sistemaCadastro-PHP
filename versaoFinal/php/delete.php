@@ -1,7 +1,7 @@
 <?php
 
 include 'conexao.php';
-include ('busca.php');
+include_once 'busca.php';
 
 //$pesquisar = $_REQUEST['pesquisar'];
 echo "$pesquisar";
