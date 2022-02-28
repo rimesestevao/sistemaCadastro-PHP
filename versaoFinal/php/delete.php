@@ -2,8 +2,8 @@
 
 include 'conexao.php';
 
-$matricula = filter_input(INPUT_GET, 'nome', FILTER_SANITIZE_SPECIAL_CHARS);
-$result_usuario = "Delete FROM matricula WHERE 'nome'='$matricula'";
+$matricula = $pesquisar;
+$result_usuario = "Delete FROM matricula WHERE matricula='$matricula'";
 $result_usuario = mysqli_query($link, $result_usuario);
 
 ?>
