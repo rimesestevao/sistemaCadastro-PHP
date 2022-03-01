@@ -27,7 +27,6 @@ $_SESSION["newsession"];
             <button type="submit" class="botaoSolid">Buscar</button>
         </form>
     </div>
-<<<<<<< Updated upstream
     <div class="cardResultado">
         <div class="float-lg-left">
             <?php
@@ -36,15 +35,6 @@ $_SESSION["newsession"];
                 $pesquisar = $_POST['busca'];
                 
                 $querySelect = $link->query("select * from matricula where matricula = '$pesquisar'");
-=======
-    <div class="container clearfix cardResultado">
-    <?php
-            include 'conexao.php';
-            
-            $pesquisar = $_POST['busca'];
-            
-            $querySelect = $link->query("select * from matricula where matricula = '$pesquisar'");
->>>>>>> Stashed changes
 
                 while ($registro = $querySelect->fetch_assoc()):
                     $matricula = $registro['matricula'];
