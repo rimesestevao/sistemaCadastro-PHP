@@ -141,14 +141,9 @@
     }
 }
 .btnForm{
-    text-align: center;
-    text-decoration: none;
-    display: block;
-    width: auto;
     -moz-appearance: none;
     -webkit-appearance: none;
-    border-radius: 10px;
     border: none;
-    border: 2px solid $primary-color;
-    background-color: $primary-light-color;
+    background-color: none;
+    background: none;
 }
