@@ -110,7 +110,6 @@
     outline: none;
 }
 .cardResultado {
-    text-align: center;
     text-decoration: none;
     display: block;
     width: auto;
@@ -118,14 +117,14 @@
     -moz-appearance: none;
     -webkit-appearance: none;
     width: 100%;
-    padding: 8px 0;
+    padding: 8px;
     border-radius: 10px;
     border: none;
     border: 2px solid $primary-color;
     color: $text-color;
     font-size: 1em;
     background-color: $primary-color;
-    height: 72px;
+    height: auto;
     max-width: 500px;
     position: relative;
     &:hover{
@@ -146,4 +145,6 @@
     border: none;
     background-color: $primary-dark-color;
     background: none;
+    position: absolute;
+    left: 2rem;
 }
