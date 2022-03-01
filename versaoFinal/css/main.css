@@ -156,6 +156,14 @@
   margin: 0px 16px;
 }
 
+.btnForm {
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  border: none;
+  background-color: none;
+  background: none;
+}
+
 body {
   height: 100%;
   background-color: #0c0612;
