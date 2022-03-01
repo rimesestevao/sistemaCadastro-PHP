@@ -108,8 +108,8 @@ include 'conexao.php';
             </div>
 
 
-            <a href="index.html" class="botaoOutline">Voltar</a>
-            <button type="submit" class="botaoSolid">Enviar</button>
+            <a href="index.html" class="botaoOutline">Cancelar</a>
+            <button type="submit" class="botaoSolid">Concluir</button>
 
         </form>
     </div>
