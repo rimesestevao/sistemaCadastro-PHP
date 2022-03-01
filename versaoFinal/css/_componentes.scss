@@ -126,7 +126,7 @@
     background-color: $primary-color;
     height: 72px;
     max-width: 500px;
-    position: relative;
+
     &:hover{
         color: $text-color;
         background-color: $primary-light-color;
@@ -147,10 +147,8 @@
     background: none;
 }
 .divForm{
-    position: absolute;
-    float: left;
+    
 }
 .divPHP{
-    position: absolute;
-    float: right;
+    
 }
