@@ -28,7 +28,7 @@ $_SESSION["newsession"];
         </form>
     </div>
     <div class="cardResultado">
-        <div >
+        <div class="divPHP" >
             <?php
                 include 'conexao.php';
                 

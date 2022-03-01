@@ -165,6 +165,14 @@
 
 .divForm {
   position: absolute;
+  float: left;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+.divPHP {
+  position: absolute;
   float: right;
 }
 
