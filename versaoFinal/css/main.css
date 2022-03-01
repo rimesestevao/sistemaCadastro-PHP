@@ -129,14 +129,14 @@
   -moz-appearance: none;
   -webkit-appearance: none;
   width: 100%;
-  padding: 8px;
+  padding: 8px 8px;
   border-radius: 10px;
   border: none;
   border: 2px solid #7320B5;
   color: #f0f0f5;
   font-size: 1em;
   background-color: #7320B5;
-  height: auto;
+  height: 72px;
   max-width: 500px;
   position: relative;
 }
@@ -161,8 +161,6 @@
   border: none;
   background-color: #33114E;
   background: none;
-  position: absolute;
-  left: 2rem;
 }
 
 body {
