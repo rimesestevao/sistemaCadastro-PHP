@@ -42,7 +42,7 @@ include 'conexao.php';
     <div class="container">
         <form autocomplete="off" id="form" action="edicao.php" method="post">
             <h2>
-                Cadastro da providência
+                Edite o seu cadastro.
             </h2>
 
             <div class="form col-12">
