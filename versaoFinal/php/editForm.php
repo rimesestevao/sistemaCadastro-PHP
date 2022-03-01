@@ -101,9 +101,9 @@ include 'conexao.php';
             <div class="form custom-select">
                 <select class="form-select" value="<?php echo "$sexo" ?>" aria-label="sexo" required name="sexo" id="sexo">
                     <option value="">Escolha seu sexo</option>
-                    <option value="masculino">Masculino</option>
-                    <option value="feminino">Feminino</option>
-                    <option value="outros">Outro</option>
+                    <option value="masculino">masculino</option>
+                    <option value="feminino">feminino</option>
+                    <option value="outros">outro</option>
                 </select>
             </div>
 
@@ -113,7 +113,14 @@ include 'conexao.php';
 
         </form>
     </div>
-
+        <script>
+        var text = '<?php echo "$sexo"?>';
+        var select = document.querySelector('#sexo');
+        for (var i = 0; i < select.options.length; i++) {
+            if (select.options[i].text === text) {
+                select.selectedIndex = i;
+                break;
+            }
+}</script>
 </body>
-
 </html>
