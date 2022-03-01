@@ -161,6 +161,12 @@
   border: none;
   background-color: #33114E;
   background: none;
+  position: absolute;
+  float: right;
+}
+
+.divForm {
+  position: relative;
 }
 
 body {
