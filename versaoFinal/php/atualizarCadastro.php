@@ -1,11 +1,8 @@
 <?php
+session_start();
+$matricula = $_SESSION['matricula'];
 
 include 'conexao.php';
-
-$querySelect = $link->query("select * from matricula where matricula = '$pesquisar'");
-    while ($registro = $querySelect->fetch_assoc()):
-        $matricula = $registro['matricula'];
-    endwhile;
 
 $nome = filter_input(INPUT_POST, 'nome', FILTER_SANITIZE_SPECIAL_CHARS);
 $idade = filter_input(INPUT_POST, 'idade', FILTER_SANITIZE_NUMBER_INT);

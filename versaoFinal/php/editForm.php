@@ -1,11 +1,12 @@
 <?php
+    session_start();
     include 'conexao.php';
 
     $pesquisar = $_POST['edit'];
+    $_SESSION['pesquisar'] = $pesquisar;
     $querySelect = $link->query("select * from matricula where matricula = '$pesquisar'");
 
     while ($registro = $querySelect->fetch_assoc()):
-        $matricula = $registro['matricula'];
         $nome = $registro['nome'];
         $idade = $registro['idade'];
         $cpf = $registro['cpf'];
