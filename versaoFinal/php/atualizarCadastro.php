@@ -1,6 +1,6 @@
 <?php
 
-include "conexao.php";
+include 'conexao.php';
 
 $nome = filter_input(INPUT_POST, 'nome', FILTER_SANITIZE_SPECIAL_CHARS);
 $idade = filter_input(INPUT_POST, 'idade', FILTER_SANITIZE_NUMBER_INT);
