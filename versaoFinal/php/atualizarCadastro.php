@@ -18,7 +18,7 @@ $celular = filter_input(INPUT_POST, 'celular', FILTER_SANITIZE_NUMBER_INT);
 echo "$cpf";
 echo "$pesquisar";
 
-$queryUpdate = $link->query("update matricula set nome='$nome' idade='$idade' cpf='$cpf' rg='$rg' sexo='$sexo' cidade='$cidade' endereco='$endereco' email='$email'celular='$celular' where matricula = '$pesquisar'");
+$queryUpdate = $link->query("UPDATE matricula set nome='$nome' idade='$idade' cpf='$cpf' rg='$rg' sexo='$sexo' cidade='$cidade' endereco='$endereco' email='$email'celular='$celular' where matricula = '$pesquisar'");
 $affected_rows = mysqli_affected_rows($link);
 if($affected_rows > 0):
     header("../busca.php");
