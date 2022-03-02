@@ -1,4 +1,16 @@
 <?php session_start();?>
+<?php
+    include 'conexao.php';
+                        
+    $pesquisar = $_POST['busca'];
+                        
+    $querySelect = $link->query("select * from matricula where matricula = '$pesquisar'");
+
+    while ($registro = $querySelect->fetch_assoc()):
+        $nome = $registro['nome'];
+
+    endwhile
+?>
 
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -26,21 +38,7 @@
         </form>
         <div class="cardResultado">
             <div class="box1">
-                <h4>
-                    <?php
-                        include 'conexao.php';
-                            
-                        $pesquisar = $_POST['busca'];
-                            
-                        $querySelect = $link->query("select * from matricula where matricula = '$pesquisar'");
-
-                        while ($registro = $querySelect->fetch_assoc()):
-                            $nome = $registro['nome'];
-
-                            echo"$nome";
-                        endwhile
-                    ?>
-                </h4>
+            <?php echo"$nome";?>
             </div>
             <div class="box2">
                 <form  autocomplete="off" method="POST" action="editForm.php">
