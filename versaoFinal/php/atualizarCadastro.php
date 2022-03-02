@@ -21,7 +21,7 @@ echo "$cidade<br>";
 $queryUpdate = $link->query("UPDATE matricula set nome='$nome', idade='$idade', cpf='$cpf', rg='$rg', sexo='$sexo', cidade='$cidade', endereco='$endereco', email='$email', celular='$celular' where matricula = '$matricula'");
 $affected_rows = mysqli_affected_rows($link);
 if($affected_rows > 0):
-    header("busca.php");
+    header('http://10.0.0.1/~riogamer/sistemaCadastro/versaoFinal/php/busca.php');
 endif;
 
 echo "$affected_rows";
