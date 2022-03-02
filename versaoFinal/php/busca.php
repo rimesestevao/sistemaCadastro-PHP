@@ -26,19 +26,21 @@
         </form>
         <div class="cardResultado">
             <div class="box1">
-                <?php
-                    include 'conexao.php';
-                        
-                    $pesquisar = $_POST['busca'];
-                        
-                    $querySelect = $link->query("select * from matricula where matricula = '$pesquisar'");
+                <h4>
+                    <?php
+                        include 'conexao.php';
+                            
+                        $pesquisar = $_POST['busca'];
+                            
+                        $querySelect = $link->query("select * from matricula where matricula = '$pesquisar'");
 
-                    while ($registro = $querySelect->fetch_assoc()):
-                        $nome = $registro['nome'];
+                        while ($registro = $querySelect->fetch_assoc()):
+                            $nome = $registro['nome'];
 
-                        echo"$nome";
-                    endwhile
-                ?>
+                            echo"$nome";
+                        endwhile
+                    ?>
+                </h4>
             </div>
             <div class="box2">
                 <form  autocomplete="off" method="POST" action="editForm.php">
