@@ -12,7 +12,8 @@ $endereco = filter_input(INPUT_POST, 'endereco', FILTER_SANITIZE_SPECIAL_CHARS);
 $email = filter_input(INPUT_POST, 'email', FILTER_SANITIZE_EMAIL);
 $celular = filter_input(INPUT_POST, 'celular', FILTER_SANITIZE_NUMBER_INT);
 
-echo "$cpf";
+echo "$cpf<br>";
+echo "$nome<br>";
 
 $queryUpdate = $link->query("UPDATE matricula set nome='$nome', idade='$idade', cpf='$cpf', rg='$rg', sexo='$sexo', cidade='$cidade', endereco='$endereco', email='$email', celular='$celular' where matricula = '$pesquisar'");
 $affected_rows = mysqli_affected_rows($link);
