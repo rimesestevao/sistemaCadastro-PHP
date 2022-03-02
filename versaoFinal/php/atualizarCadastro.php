@@ -20,5 +20,7 @@ $queryUpdate = $link->query("update matricula set nome=$nome idade=$idade cpf=$c
 $affected_rows = mysqli_affected_rows($link);
 if($affected_rows > 0):
     header("../busca.php");
-    endif
+endif;
+
+echo "$affected_rows";
 ?>
