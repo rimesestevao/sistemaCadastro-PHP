@@ -171,16 +171,19 @@
 .box1 {
   width: 200px;
   height: 2rem;
+  background-color: red;
 }
 
 .box2 {
   width: 50px;
   height: 2rem;
+  background-color: red;
 }
 
 .box3 {
   width: 50px;
   height: 2rem;
+  background-color: red;
 }
 
 body {
