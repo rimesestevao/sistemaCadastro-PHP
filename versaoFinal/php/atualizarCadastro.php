@@ -1,5 +1,5 @@
 <?php
-session_start();
+
 include "conexao.php";
 
 $nome = filter_input(INPUT_POST, 'nome', FILTER_SANITIZE_SPECIAL_CHARS);
