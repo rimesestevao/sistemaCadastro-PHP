@@ -123,8 +123,19 @@
 
 .cardResultado {
   text-decoration: none;
-  display: block;
-  width: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   margin-top: 16px;
   -moz-appearance: none;
   -webkit-appearance: none;
@@ -136,7 +147,6 @@
   color: #f0f0f5;
   font-size: 1em;
   background-color: #7320B5;
-  height: 72px;
   max-width: 500px;
 }
 

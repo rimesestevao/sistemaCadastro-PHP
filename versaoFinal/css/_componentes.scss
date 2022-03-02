@@ -111,8 +111,10 @@
 }
 .cardResultado {
     text-decoration: none;
-    display: block;
-    width: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
     margin-top: 16px;
     -moz-appearance: none;
     -webkit-appearance: none;
@@ -124,7 +126,6 @@
     color: $text-color;
     font-size: 1em;
     background-color: $primary-color;
-    height: 72px;
     max-width: 500px;
 
     &:hover{
