@@ -126,8 +126,7 @@
     color: $text-color;
     font-size: 1em;
     background-color: $primary-color;
-    transform: scaleX(50%);
-
+    height: 4rem;
     &:hover{
         color: $text-color;
         background-color: $primary-light-color;
@@ -136,9 +135,6 @@
         color: $text-color;
         background-color: $primary-dark-color;
     }
-    a{
-        margin: 0px 16px;
-    }
 }
 .btnForm{
     -moz-appearance: none;
@@ -146,4 +142,16 @@
     border: none;
     background-color: $primary-dark-color;
     background: none;
+}
+.box1{
+    width: 200px;
+    height: 2rem;
+}
+.box2{
+    width: 50px;
+    height: 2rem;
+}
+.box3{
+    width: 50px;
+    height: 2rem;
 }

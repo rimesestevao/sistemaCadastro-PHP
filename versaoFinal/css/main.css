@@ -147,8 +147,7 @@
   color: #f0f0f5;
   font-size: 1em;
   background-color: #7320B5;
-  -webkit-transform: scaleX(50%);
-          transform: scaleX(50%);
+  height: 4rem;
 }
 
 .cardResultado:hover {
@@ -161,16 +160,27 @@
   background-color: #33114E;
 }
 
-.cardResultado a {
-  margin: 0px 16px;
-}
-
 .btnForm {
   -moz-appearance: none;
   -webkit-appearance: none;
   border: none;
   background-color: #33114E;
   background: none;
+}
+
+.box1 {
+  width: 200px;
+  height: 2rem;
+}
+
+.box2 {
+  width: 50px;
+  height: 2rem;
+}
+
+.box3 {
+  width: 50px;
+  height: 2rem;
 }
 
 body {
