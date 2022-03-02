@@ -2,9 +2,6 @@
 session_start();
 include "conexao.php";
 
-$pesquisar = $_POST['edit'];
-
-$matricula = filter_input(INPUT_POST, 'matricula', FILTER_SANITIZE_NUMBER_INT);
 $nome = filter_input(INPUT_POST, 'nome', FILTER_SANITIZE_SPECIAL_CHARS);
 $idade = filter_input(INPUT_POST, 'idade', FILTER_SANITIZE_NUMBER_INT);
 $cpf = filter_input(INPUT_POST, 'cpf', FILTER_SANITIZE_NUMBER_INT);
