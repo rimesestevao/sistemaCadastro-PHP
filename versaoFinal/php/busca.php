@@ -1,6 +1,4 @@
-<?php session_start();
-$_SESSION["newsession"];
-?>
+<?php session_start();?>
 
 <!DOCTYPE html>
 <html lang="pt-br">
