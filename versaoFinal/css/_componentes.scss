@@ -135,26 +135,20 @@
         color: $text-color;
         background-color: $primary-dark-color;
     }
-}
-.btnForm{
-    -moz-appearance: none;
-    -webkit-appearance: none;
-    border: none;
-    background-color: $primary-dark-color;
-    background: none;
-}
-.box1{
-    width: 200px;
-    height: 2rem;
-    background-color: red;
-}
-.box2{
-    width: 50px;
-    height: 2rem;
-    background-color: red;
-}
-.box3{
-    width: 50px;
-    height: 2rem;
-    background-color: red;
+    .btnForm{
+        -moz-appearance: none;
+        -webkit-appearance: none;
+        border: none;
+        background-color: $primary-dark-color;
+        background: none;
+    }
+    .box1{
+        background-color: red;
+    }
+    .box2{
+        background-color: red;
+    }
+    .box3{
+        background-color: red;
+    }
 }

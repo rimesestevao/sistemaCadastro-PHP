@@ -160,7 +160,7 @@
   background-color: #33114E;
 }
 
-.btnForm {
+.cardResultado .btnForm {
   -moz-appearance: none;
   -webkit-appearance: none;
   border: none;
@@ -168,21 +168,15 @@
   background: none;
 }
 
-.box1 {
-  width: 200px;
-  height: 2rem;
+.cardResultado .box1 {
   background-color: red;
 }
 
-.box2 {
-  width: 50px;
-  height: 2rem;
+.cardResultado .box2 {
   background-color: red;
 }
 
-.box3 {
-  width: 50px;
-  height: 2rem;
+.cardResultado .box3 {
   background-color: red;
 }
 
