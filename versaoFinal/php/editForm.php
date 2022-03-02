@@ -3,7 +3,7 @@
     include 'conexao.php';
 
     $pesquisar = $_POST['edit'];
-    $_SESSION['pesquisar'] = $pesquisar;
+    $_SESSION['matricula'] = $pesquisar;
     $querySelect = $link->query("select * from matricula where matricula = '$pesquisar'");
 
     while ($registro = $querySelect->fetch_assoc()):
