@@ -1,5 +1,5 @@
 <?php session_start();
-$_SESSION["newsession"];
+
 include 'conexao.php';
 
 ?>

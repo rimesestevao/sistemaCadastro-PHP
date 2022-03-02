@@ -2,7 +2,7 @@
 session_start();
 include "conexao.php";
 
-$matricula = $_SESSION['matricula'];
+$pesquisar = $_POST['edit'];
 
 $nome = filter_input(INPUT_POST, 'nome', FILTER_SANITIZE_SPECIAL_CHARS);
 $idade = filter_input(INPUT_POST, 'idade', FILTER_SANITIZE_NUMBER_INT);
@@ -15,9 +15,9 @@ $email = filter_input(INPUT_POST, 'email', FILTER_SANITIZE_EMAIL);
 $celular = filter_input(INPUT_POST, 'celular', FILTER_SANITIZE_NUMBER_INT);
 
 echo "$cpf";
-echo "$matricula";
+echo "$pesquisar";
 
-$queryUpdate = $link->query("update matricula set nome='$nome' idade='$idade' cpf='$cpf' rg='$rg' sexo='$sexo' cidade='$cidade' endereco='$endereco' email='$email'celular='$celular' where matricula = '$matricula'");
+$queryUpdate = $link->query("update matricula set nome='$nome' idade='$idade' cpf='$cpf' rg='$rg' sexo='$sexo' cidade='$cidade' endereco='$endereco' email='$email'celular='$celular' where matricula = '$pesquisar'");
 $affected_rows = mysqli_affected_rows($link);
 if($affected_rows > 0):
     header("../busca.php");
