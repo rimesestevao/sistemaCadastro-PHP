@@ -24,7 +24,7 @@
             <a href="../pages/index.html" class="botaoOutline">Voltar</a>
             <button type="submit" class="botaoSolid">Buscar</button>
         </form>
-        <div class="cardResultado mt-3">
+        <div class="cardResultado mt-6">
             <?php
                 include 'conexao.php';
                     
