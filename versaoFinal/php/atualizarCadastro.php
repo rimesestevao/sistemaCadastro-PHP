@@ -1,6 +1,7 @@
 <?php
 
 include 'conexao.php';
+include_once 'editForm.php';
 
 $matricula = filter_input(INPUT_POST, 'matricula', FILTER_SANITIZE_SPECIAL_CHARS);
 $nome = filter_input(INPUT_POST, 'nome', FILTER_SANITIZE_SPECIAL_CHARS);
