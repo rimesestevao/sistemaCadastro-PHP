@@ -1,5 +1,7 @@
 <?php
 
+include "conexao.php";
+
 $pesquisar = $_POST['edit'];
 
 $matricula = filter_input(INPUT_POST, 'matricula', FILTER_SANITIZE_NUMBER_INT);
