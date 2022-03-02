@@ -13,7 +13,6 @@ $email = filter_input(INPUT_POST, 'email', FILTER_SANITIZE_EMAIL);
 $celular = filter_input(INPUT_POST, 'celular', FILTER_SANITIZE_NUMBER_INT);
 
 echo "$cpf";
-echo "$matricula";
 
 $queryUpdate = $link->query("UPDATE matricula SET nome='$nome', idade='$idade', cpf='$cpf', rg='$rg', sexo='$sexo', cidade='$cidade', endereco='$endereco', email='$email', celular='$celular' WHERE matricula = '$pesquisar'");
 $affected_rows = mysqli_affected_rows($link);
