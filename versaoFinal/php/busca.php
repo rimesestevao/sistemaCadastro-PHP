@@ -25,7 +25,6 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;700&display=swap">
 
     <script src="../scripts/main.js" defer></script>
-    <script type="text/javascript" src="../node_modules/jquery/"></script>
 </head>
 
 <body>
@@ -36,7 +35,7 @@
             <a href="../pages/index.html" class="botaoOutline">Voltar</a>
             <button type="submit" class="botaoSolid">Buscar</button>
         </form>
-        <div class="cardResultado">
+        <div class="cardResultado" hidden id="cardResultado">
             <div class="box1">
             <?php echo"$nome";?>
             </div>
@@ -52,6 +51,13 @@
             </div>
         </div>
     </div>
+    <script>
+        let cardResultado = document.getElementById(cardResultado);
+        let isHidden = "<?php echo"$pesquisar"?>";
+        if(isHidden != " "){
+            cardResultado.removeAttribute("hidden");
+        }
+    </script>
 </body>
 
 </html>
