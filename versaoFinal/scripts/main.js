@@ -138,12 +138,6 @@ function mascara(i,t){
  }
 
 
-
- let form = doxument.getElementById('form');
-
-let nome = form.elements['nome'];
-let nomeValidar = nome.value;
-
 function requireValue(input) {
     return !(input.value.trim() === '');
 }
