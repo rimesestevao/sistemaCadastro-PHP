@@ -54,6 +54,7 @@
     <script>
         let cardResultado = document.getElementById('cardResultado');
         let isHidden = "<?php echo"$pesquisar"?>";
+        console.log(isHidden);
         if(isHidden != " "){
             cardResultado.removeAttribute("hidden");
         }
