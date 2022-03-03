@@ -44,27 +44,27 @@
             </h2>
 
             <div class="form col-12">
-                <input class="input" value="<?php echo "$nome" ?>" placeholder=" " required type="text" name="nome" id="nome" />
+                <input class="input" value="<?php echo "$nome" ?>" placeholder=" "  type="text" name="nome" id="nome" />
                 <label for="nome" class="label">Nome</label>
             </div>
 
 
             <div class="form">
-                <input class="input" placeholder=" " value="<?php echo "$cpf" ?>" value="<?php echo"$cpf" ?>" required oninput="mascara(this, 'cpf')" maxlength="11" type="text"
+                <input class="input" placeholder=" " value="<?php echo "$cpf" ?>" value="<?php echo"$cpf" ?>" type="text"
                     name="cpf" id="cpf" />
                 <label for="cpf" class="label">CPF</label>
             </div>
 
 
             <div class="form">
-                <input class="input" placeholder=" " value="<?php echo "$rg" ?>" required oninput="mascara(this, 'rg')" type="text" name="rg"
+                <input class="input" placeholder=" " value="<?php echo "$rg" ?>" type="text" name="rg"
                     id="rg" />
                 <label for="rg" class="label">RG</label>
             </div>
 
 
             <div class="form">
-                <input class="input" placeholder=" " value="<?php echo "$idade" ?>" required type="number" max="999" oninput="mascara(this, 'idade')"
+                <input class="input" placeholder=" " value="<?php echo "$idade" ?>"  type="number" max="999" 
                     name="idade" id="idade" />
                 <label for="idade" class="label">Idade</label>
             </div>
@@ -72,24 +72,24 @@
 
 
             <div class="form">
-                <input class="input" placeholder=" " value="<?php echo "$cidade" ?>" required type="text" name="cidade" id="cidade" />
+                <input class="input" placeholder=" " value="<?php echo "$cidade" ?>" type="text" name="cidade" id="cidade" />
                 <label for="cidade" class="label">Cidade</label>
             </div>
 
 
             <div class="form">
-                <input class="input" placeholder=" " value="<?php echo "$endereco" ?>" required type="text" name="endereco" id="endereco" />
+                <input class="input" placeholder=" " value="<?php echo "$endereco" ?>"  type="text" name="endereco" id="endereco" />
                 <label for="endereco" class="label">Endereço</label>
             </div>
 
             <div class="form">
-                <input class="input" placeholder=" " value="<?php echo "$email" ?>" required type="email" name="email" id="email" />
+                <input class="input" placeholder=" " value="<?php echo "$email" ?>"  type="email" name="email" id="email" />
                 <label for="email" class="label">E-mail</label>
             </div>
 
 
             <div class="form">
-                <input class="input" required oninput="mascara(this, 'tel')" placeholder=" " value="<?php echo "$celular" ?>" type="tel" name="celular"
+                <input class="input" placeholder=" " value="<?php echo "$celular" ?>" type="tel" name="celular"
                     id="celular" />
                 <label for="celular" class="label">Celular</label>
             </div>
@@ -97,7 +97,7 @@
 
 
             <div class="form custom-select">
-                <select class="form-select" value="<?php echo "$sexo" ?>" aria-label="sexo" required name="sexo" id="sexo">
+                <select class="form-select" value="<?php echo "$sexo" ?>" aria-label="sexo"  name="sexo" id="sexo">
                     <option value="">Escolha seu sexo</option>
                     <option value="masculino">masculino</option>
                     <option value="feminino">feminino</option>
