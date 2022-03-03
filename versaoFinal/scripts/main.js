@@ -135,9 +135,4 @@ function mascara(i,t){
            if (v.length == 8) i.value += "-";
         }
     }
- }
-
-
-function requireValue(input) {
-    return !(input.value.trim() === '');
 }
