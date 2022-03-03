@@ -11,6 +11,6 @@ echo '<script type ="text/JavaScript">';
 echo 'alert("JavaScript Alert Box by PHP")';  
 echo '</script>';  
 
-header('Location: ../pages/busca.html');
+//header('Location: ../pages/busca.html');
 
 ?>
