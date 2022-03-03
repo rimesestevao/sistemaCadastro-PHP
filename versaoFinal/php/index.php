@@ -45,18 +45,15 @@
         if( validaCPF($cpf) ){
             
             $queryInsert= $link ->query("insert into matricula values ('$matricula','$nome', '$idade', '$cpf', '$rg', '$sexo', '$cidade', '$endereco', '$email', '$celular')");
-            $affected_rows = mysqli_affected_rows($link);
             
             if (mysqli_query($link, $sql)) {
                     echo " New record created successfully";
+                    header("Location:../pages/index.html");
             } else {
                     echo "Error: " . $sql . "<br>" . mysqli_error($link);
             }
             mysqli_close($link);
 
-            if($affected_rows > 0):
-                header("Location:../pages/index.html");
-            endif;
 
         }
         else{
