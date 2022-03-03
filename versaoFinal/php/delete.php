@@ -11,8 +11,9 @@ echo '<script type ="text/JavaScript">';
 echo 'alert("Apagado com sucesso! Você será redirecionado em alguns instantes.")';  
 echo '</script>';  
 
+?>
+<?php
 sleep(5);
 
 header('Location: ../pages/busca.html');
-
 ?>
