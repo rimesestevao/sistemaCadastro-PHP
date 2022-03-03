@@ -126,10 +126,10 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
+  -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+      -ms-flex-direction: row;
+          flex-direction: row;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
@@ -146,18 +146,18 @@
   border: 2px solid #7320B5;
   color: #f0f0f5;
   font-size: 1em;
-  background-color: #7320B5;
+  background-color: rgba(255, 255, 255, 0.04);
   height: 4rem;
 }
 
 .cardResultado:hover {
   color: #f0f0f5;
-  background-color: #AB58ED;
+  background-color: rgba(255, 255, 255, 0.1);
 }
 
 .cardResultado:active {
   color: #f0f0f5;
-  background-color: #33114E;
+  background-color: rgba(255, 255, 255, 0.01);
 }
 
 .cardResultado .btnForm {
@@ -169,15 +169,25 @@
 }
 
 .cardResultado .box1 {
+  padding-left: 8px;
   background-color: red;
 }
 
 .cardResultado .box2 {
   background-color: red;
-}
-
-.cardResultado .box3 {
-  background-color: red;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 body {
