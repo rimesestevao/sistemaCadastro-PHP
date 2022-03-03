@@ -52,7 +52,7 @@
         </div>
     </div>
     <script>
-        let cardResultado = document.getElementById(cardResultado);
+        let cardResultado = document.getElementById('cardResultado');
         let isHidden = "<?php echo"$pesquisar"?>";
         if(isHidden != " "){
             cardResultado.removeAttribute("hidden");
