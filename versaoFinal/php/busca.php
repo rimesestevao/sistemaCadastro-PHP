@@ -1,7 +1,8 @@
 <?php session_start();?>
 <?php
     include 'conexao.php';
-                        
+    
+    $pesquisar = "0";
     $pesquisar = $_POST['busca'];
                         
     $querySelect = $link->query("select * from matricula where matricula = '$pesquisar'");
