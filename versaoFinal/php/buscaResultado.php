@@ -35,7 +35,7 @@
             <a href="../pages/index.html" class="botaoOutline">Voltar</a>
             <button type="submit" class="botaoSolid">Buscar</button>
         </form>
-        <div class="cardResultado" hidden id="cardResultado">
+        <div class="cardResultado" id="cardResultado">
             <div class="box1">
             <?php echo"$nome";?>
             </div>
