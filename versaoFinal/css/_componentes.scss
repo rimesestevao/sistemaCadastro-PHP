@@ -133,7 +133,6 @@
     }
     &:active{
         color: $text-color;
-        background-color: $more-dark-color;
     }
     .btnForm{
         -moz-appearance: none;
@@ -141,13 +140,23 @@
         border: none;
         background-color: $primary-dark-color;
         background: none;
+        padding: 8px 8px;
+        margin: 8px;
+        border-radius: 10px;
+        border: 2px solid $primary-color;
+        &:hover{
+            border: 1px solid $primary-color;
+            background-color: $primary-light-color;
+        }
+        &:active{
+            border: 1px solid $primary-color;
+            background-color: $primary-light-color;
+        }
     }
     .box1{
         padding-left: 8px;
-        background-color: red;
     }
     .box2{
-        background-color: red;
         display: flex;
         flex-direction: row;
         justify-content: space-between;
