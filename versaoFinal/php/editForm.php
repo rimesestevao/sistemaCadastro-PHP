@@ -106,7 +106,7 @@
             </div>
 
 
-            <a href="index.html" class="botaoOutline">Cancelar</a>
+            <a href="../pages/index.html" class="botaoOutline">Cancelar</a>
             <button type="submit" class="botaoSolid">Concluir</button>
 
         </form>
