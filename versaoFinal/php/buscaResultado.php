@@ -2,7 +2,6 @@
 <?php
     include 'conexao.php';
     
-    $pesquisar = "0";
     $pesquisar = $_POST['busca'];
                         
     $querySelect = $link->query("select * from matricula where matricula = '$pesquisar'");
@@ -31,7 +30,7 @@
 <body>
     <div class="container">
         <h4>Digite a matrícula que deseja procurar</h4>
-        <form autocomplete="off" action="busca.php" method="POST">
+        <form autocomplete="off" action="buscaResultado.php" method="POST">
             <input class="form-control me-2" type="search"  aria-label="Search" name="busca">
             <a href="../pages/index.html" class="botaoOutline">Voltar</a>
             <button type="submit" class="botaoSolid">Buscar</button>
@@ -52,14 +51,6 @@
             </div>
         </div>
     </div>
-    <script>
-        let cardResultado = document.getElementById('cardResultado');
-        let isHidden = "<?php echo"$pesquisar"?>";
-        console.log(isHidden);
-        if(isHidden != " "){
-            cardResultado.removeAttribute("hidden");
-        }
-    </script>
 </body>
 
 </html>
