@@ -86,7 +86,7 @@ function checkInputs(){
         setSuccessFor("celular");
     }
 
-    if(celularValue ||emailValue ||enderecoValue ||cidadeValue ||sexoValue ||idadeValue ||rgValue ||cpfValue ||nomeValue != 0){
+    if(celularValue && emailValue && enderecoValue && cidadeValue && sexoValue && idadeValue && rgValue && cpfValue && nomeValue != ""){
         document.getElementById("form").submit();
     }
 }
