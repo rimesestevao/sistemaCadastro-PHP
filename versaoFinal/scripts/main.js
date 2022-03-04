@@ -99,6 +99,51 @@ function setErrorFor(input){
     document.getElementById(input).style.borderColor = "red";
 }
 
+function validaCPF(cpf){
+
+    cpf = cpf.replace(/\.|-/g,"");
+    if(!isPrimeiroDigitoValido(cpf)){
+        return false;
+    }
+    if(!isSegundoDigitoValido(cpf)){
+        return false;
+    }
+    return true;
+}
+
+function isPrimeiroDigitoValido(cpf){
+    let soma = 0;
+    for (let i = 0; i < cpf.length-2; i++) {
+        soma += cpf[i] * ((cpf.length-1)-i);
+    }
+    soma = (soma * 10) % 11;
+    if (soma == 10 || soma == 11){
+        soma = 0;
+    }
+    if (soma != cpf[9]){
+        return false
+    }
+    return true
+}
+
+function isSegundoDigitoValido(cpf){
+    let soma = 0;
+    for (let i = 0; i < cpf.length-1; i++) {
+        soma += cpf[i] * ((cpf.length)-i);
+    }
+    soma = (soma * 10) % 11;
+    if (soma == 10 || soma == 11){
+        soma = 0;
+    }
+    if (soma != cpf[10]){
+        return false
+    }
+    return true
+}
+
+
+
+
 
 
 // function mascara(i,t){
