@@ -7,7 +7,6 @@
             $rowcount=mysqli_num_rows($result);
         }
 
-        $matricula = $rowcount + 1;
         $nome = $_GET["nome"];
         $idade = $_GET["idade"];
         $cpf = $_GET["cpf"];
