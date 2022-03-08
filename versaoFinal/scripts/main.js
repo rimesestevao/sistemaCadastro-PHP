@@ -164,20 +164,13 @@ function alertFofo(tipo,titulo,texto) {
       })
 }
 
-function alertFofoDelete() {
-    Swal.fire({
-        icon: "success",
-        title: "Cadastro apagado com sucesso!",
-        text: "Você será redirecionado em instantes.",
-        showConfirmButton: false,
-        timer: 4500
-      })
-    setTimeout(() => {  document.getElementById("deleteForm").submit(); }, 2000);
+//function alertFofoDelete() {
+ //   alertFofo("success","Você apagou o registro com sucesso!","Você será redirecionado em breve");
+  //  setTimeout(() => {  document.getElementById("form").submit(); }, 2000);
     
-}
+//}
 
 function alertFofoEdit() {
-    setTimeout(() => {  document.getElementById("formEdit").submit(); }, 2000);
     Swal.fire({
         icon: "success",
         title: "Cadastro alterado com sucesso!",
@@ -185,6 +178,21 @@ function alertFofoEdit() {
         showConfirmButton: false,
         timer: 4500
       })
+}
+
+function delay(n){
+    return new Promise(function(resolve){
+        setTimeout(resolve,n*1000);
+    });
+}
+
+async function asyncDelete(){
+    alertFofo("success","Você apagou o registro com sucesso!","Você será redirecionado em breve");
+
+    await delay(2);
+
+    document.getElementById("form").submit();
+
 }
 
 // function mascara(i,t){
