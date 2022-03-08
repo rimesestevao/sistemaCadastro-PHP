@@ -24,6 +24,5 @@ if($affected_rows > 0):
     header('Location: ../pages/index.html');
 endif;
 
-echo "$affected_rows";
 
 ?>

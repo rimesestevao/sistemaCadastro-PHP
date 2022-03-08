@@ -90,7 +90,7 @@ function checkInputs(){
     if(celularValue && emailValue && enderecoValue && cidadeValue && sexoValue && idadeValue && rgValue && cpfValue && nomeValue != ""){
         if(validaCPF(cpfValue)){
             alertFofo("success","Cadastro realizado com sucesso!","Você será redirecionado em breve.");
-            document.getElementById("form").submit();
+            setTimeout(() => {  document.getElementById("form").submit(); }, 2000);
         }else{
             alertFofo("error","CPF não é válido!","Preencha os campos corretamente.");
         }
@@ -172,10 +172,12 @@ function alertFofoDelete() {
         showConfirmButton: false,
         timer: 4500
       })
-    document.getElementById("deleteForm").submit();
+    setTimeout(() => {  document.getElementById("deleteForm").submit(); }, 2000);
+    
 }
 
 function alertFofoEdit() {
+    setTimeout(() => {  document.getElementById("formEdit").submit(); }, 2000);
     Swal.fire({
         icon: "success",
         title: "Cadastro alterado com sucesso!",
@@ -183,7 +185,6 @@ function alertFofoEdit() {
         showConfirmButton: false,
         timer: 4500
       })
-    document.getElementById("editForm").submit();
 }
 
 // function mascara(i,t){
