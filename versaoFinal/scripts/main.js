@@ -12,6 +12,7 @@ const celular = document.getElementById('celular');
 
 
 form.addEventListener('submit', (e) =>{
+    
     e.preventDefault();
 
     checkInputs();
@@ -38,10 +39,10 @@ function checkInputs(){
         setSuccessFor("nome");
     }
 
-    if(cpfValue == ''){
-        setErrorFor("cpf");
-    }else{
+    if(validaCPF(cpfValue)){
         setSuccessFor("cpf");
+    }else{
+        setErrorFor("cpf");
     }
 
     if(rgValue == ''){
@@ -87,6 +88,7 @@ function checkInputs(){
     }
 
     if(celularValue && emailValue && enderecoValue && cidadeValue && sexoValue && idadeValue && rgValue && cpfValue && nomeValue != ""){
+        alert("Cadastro feito com sucesso");
         document.getElementById("form").submit();
     }
 }
@@ -103,9 +105,11 @@ function validaCPF(cpf){
 
     cpf = cpf.replace(/\.|-/g,"");
     if(!isPrimeiroDigitoValido(cpf)){
+        alert("CPF não é válido");
         return false;
     }
     if(!isSegundoDigitoValido(cpf)){
+        alert("CPF não é válido");
         return false;
     }
     return true;
