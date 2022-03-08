@@ -88,8 +88,14 @@ function checkInputs(){
     }
 
     if(celularValue && emailValue && enderecoValue && cidadeValue && sexoValue && idadeValue && rgValue && cpfValue && nomeValue != ""){
-        alert("Cadastro feito com sucesso");
-        document.getElementById("form").submit();
+        if(validaCPF(cpfValue)){
+            alertFofo("success","Cadastro realizado com sucesso!","Você será redirecionado em breve.");
+            document.getElementById("form").submit();
+        }else{
+            alertFofo("error","CPF não é válido!","Preencha os campos corretamente.");
+        }
+    }else{
+        alertFofo("error","Não pode deixar nenhum campo em branco!","Preencha os campos corretamente.");
     }
 }
 
@@ -105,11 +111,9 @@ function validaCPF(cpf){
 
     cpf = cpf.replace(/\.|-/g,"");
     if(!isPrimeiroDigitoValido(cpf)){
-        alert("CPF não é válido");
         return false;
     }
     if(!isSegundoDigitoValido(cpf)){
-        alert("CPF não é válido");
         return false;
     }
     return true;
@@ -145,10 +149,42 @@ function isSegundoDigitoValido(cpf){
     return true
 }
 
+$("#celular").mask("(99) 99999-9999");
+$("#cpf").mask("999.999.999-99");
+$("#rg").mask("99.999.999-9");
 
 
+function alertFofo(tipo,titulo,texto) {
+    Swal.fire({
+        icon: tipo,
+        title: titulo,
+        text: texto,
+        showConfirmButton: false,
+        timer: 4500
+      })
+}
 
+function alertFofoDelete() {
+    Swal.fire({
+        icon: "success",
+        title: "Cadastro apagado com sucesso!",
+        text: "Você será redirecionado em instantes.",
+        showConfirmButton: false,
+        timer: 4500
+      })
+    document.getElementById("deleteForm").submit();
+}
 
+function alertFofoEdit() {
+    Swal.fire({
+        icon: "success",
+        title: "Cadastro alterado com sucesso!",
+        text: "Você será redirecionado em breve.",
+        showConfirmButton: false,
+        timer: 4500
+      })
+    document.getElementById("editForm").submit();
+}
 
 // function mascara(i,t){
    
@@ -185,6 +221,3 @@ function isSegundoDigitoValido(cpf){
 //         }
 //     }
 // }
-$("#celular").mask("(99) 99999-9999");
-$("#cpf").mask("999.999.999-99");
-$("#rg").mask("99.999.999-9");
