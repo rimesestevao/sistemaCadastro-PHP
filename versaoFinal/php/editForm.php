@@ -40,7 +40,7 @@
 
 <body>
     <div class="container">
-        <form autocomplete="off" id="formEdit" action="atualizarCadastro.php" method="post">
+        <form autocomplete="off" id="form" action="atualizarCadastro.php" method="post">
             <h2>
                 Edite o seu cadastro.
             </h2>
@@ -109,7 +109,7 @@
 
 
             <a href="../pages/index.html" class="botaoOutline">Cancelar</a>
-            <button type="submit" class="botaoSolid">Concluir</button>
+            <button onClick="alertFofoEdit();" class="botaoSolid">Concluir</button>
 
         </form>
     </div>
