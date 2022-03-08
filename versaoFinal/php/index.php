@@ -44,7 +44,7 @@
 
         if( validaCPF($cpf) ){
             
-            $queryInsert= $link ->query("insert into matricula values ('$matricula','$nome', '$idade', '$cpf', '$rg', '$sexo', '$cidade', '$endereco', '$email', '$celular')");
+            $queryInsert= $link ->query("insert into matricula values ('$nome', '$idade', '$cpf', '$rg', '$cidade', '$endereco', '$email', '$celular','$sexo')");
             
             if (mysqli_query($link, $sql)) {
                     echo " New record created successfully";
