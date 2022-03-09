@@ -153,13 +153,17 @@ $("#rg").mask("99.999.999-9");
 
 
 function alertFofo(tipo,titulo,texto) {
-    Swal.fire({
-        icon: tipo,
-        title: titulo,
-        text: texto,
-        showConfirmButton: false,
-        timer: 4500
-      })
+    Swal.fire({  
+        icon:'success',
+        title: 'Cadastro válido!',    
+        text: 'Clique em OK para enviar o formulário e retornar para a página inicial.',
+        confirmButtonText: `OK`,  
+      }).then((result) => {  
+          /* Read more about isConfirmed, isDenied below */  
+          if (result.isConfirmed) {    
+            document.getElementById("form").submit();  
+          }
+      });
 }
 //function alertFofoDelete() {
  //   alertFofo("success","Você apagou o registro com sucesso!","Você será redirecionado em breve");
