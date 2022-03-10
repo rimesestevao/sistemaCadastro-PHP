@@ -164,6 +164,18 @@ function alertCadastro(titulo,texto) {
           }
       });
 }
+function alertDelete(titulo,texto) {
+    Swal.fire({  
+        icon:'success',
+        title: titulo,    
+        text: texto,
+        confirmButtonText: `OK`,  
+      }).then((result) => {  
+          if (result.isConfirmed) {    
+            document.getElementById("formDelete").submit();  
+          }
+      });
+}
 
 //function alertFofoDelete() {
  //   alertFofo("success","Você apagou o registro com sucesso!","Você será redirecionado em breve");
