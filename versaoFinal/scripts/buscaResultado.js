@@ -2,7 +2,7 @@
 const letDelete = document.getElementById('delete');
 
 
-form.addEventListener('submit', (e) =>{
+letDelete.addEventListener('submit', (e) =>{
     
     e.preventDefault();
 
