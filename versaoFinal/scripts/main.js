@@ -164,17 +164,20 @@ function alertCadastro(titulo,texto) {
           }
       });
 }
-function alertDelete(titulo,texto) {
-    Swal.fire({  
-        icon:'success',
-        title: titulo,    
-        text: texto,
-        confirmButtonText: `OK`,  
-      }).then((result) => {  
-          if (result.isConfirmed) {    
-            document.getElementById("formDelete").submit();  
-          }
-      });
+function alertDelete() {
+    Swal.fire({
+        title: 'Você tem certeza?',
+        showDenyButton: true,
+        showCancelButton: true,
+        showConfirmButton: false,
+        denyButtonText: 'Apagar',
+        cancelButtonText: 'Voltar',
+        icon: 'warning',
+      }).then((result) => {
+        if (result.isDenied) {
+            document.getElementById("form").submit(); 
+        }
+      })
 }
 
 //function alertFofoDelete() {
