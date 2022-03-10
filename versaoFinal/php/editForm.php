@@ -113,7 +113,7 @@
 
         </form>
     </div>
-        <script>
+    <script>
         var text = '<?php echo "$sexo"?>';
         var select = document.querySelector('#sexo');
         for (var i = 0; i < select.options.length; i++) {
@@ -121,6 +121,8 @@
                 select.selectedIndex = i;
                 break;
             }
-}</script>
+        }
+    </script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </body>
 </html>
