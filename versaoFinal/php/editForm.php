@@ -40,7 +40,7 @@
 
 <body>
     <div class="container">
-        <form autocomplete="off" id="form4" action="atualizarCadastro.php" method="post">
+        <form autocomplete="off" id="form" action="atualizarCadastro.php" method="post">
             <h2>
                 Edite o seu cadastro.
             </h2>
