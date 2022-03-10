@@ -90,7 +90,7 @@ function checkInputs(){
         if(validaCPF(cpfValue)){
             alertCadastro("Cadastro válido!","Clique em OK para finalizar o cadastro e voltar para o menu.");
         }else{
-            Swal.fire('Erro!','CPF não é válido','error')
+            Swal.fire('Erro!','CPF não é válido','error');
         }
     }else{
         Swal.fire('Erro!','Não pode deixar nenhum campo em branco!','error');
@@ -164,27 +164,6 @@ function alertCadastro(titulo,texto) {
           }
       });
 }
-function alertDelete() {
-    Swal.fire({
-        title: 'Você tem certeza?',
-        showDenyButton: true,
-        showCancelButton: true,
-        showConfirmButton: false,
-        denyButtonText: 'Apagar',
-        cancelButtonText: 'Voltar',
-        icon: 'warning',
-      }).then((result) => {
-        if (result.isDenied) {
-            document.getElementById("form").submit(); 
-        }
-      })
-}
-
-//function alertFofoDelete() {
- //   alertFofo("success","Você apagou o registro com sucesso!","Você será redirecionado em breve");
-  //  setTimeout(() => {  document.getElementById("form").submit(); }, 2000);
-    
-//}
 
 
 // function mascara(i,t){
