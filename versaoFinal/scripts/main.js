@@ -88,12 +88,12 @@ function checkInputs(){
 
     if(celularValue && emailValue && enderecoValue && cidadeValue && sexoValue && idadeValue && rgValue && cpfValue && nomeValue != ""){
         if(validaCPF(cpfValue)){
-            alertFofo("success","Cadastro realizado com sucesso!","Você será redirecionado em breve.");
+            alertCadastro("Cadastro válido!","Clique em OK para finalizar o cadastro e voltar para o menu.");
         }else{
-            alertFofo("error","CPF não é válido!","Preencha os campos corretamente.");
+            Swal.fire('Erro!','CPF não é válido','error')
         }
     }else{
-        alertFofo("error","Não pode deixar nenhum campo em branco!","Preencha os campos corretamente.");
+        Swal.fire('Erro!','Não pode deixar nenhum campo em branco!','error');
     }
 }
 
@@ -152,19 +152,19 @@ $("#cpf").mask("999.999.999-99");
 $("#rg").mask("99.999.999-9");
 
 
-function alertFofo(tipo,titulo,texto) {
+function alertCadastro(titulo,texto) {
     Swal.fire({  
         icon:'success',
-        title: 'Cadastro válido!',    
-        text: 'Clique em OK para enviar o formulário e retornar para a página inicial.',
+        title: titulo,    
+        text: texto,
         confirmButtonText: `OK`,  
       }).then((result) => {  
-          /* Read more about isConfirmed, isDenied below */  
           if (result.isConfirmed) {    
             document.getElementById("form").submit();  
           }
       });
 }
+
 //function alertFofoDelete() {
  //   alertFofo("success","Você apagou o registro com sucesso!","Você será redirecionado em breve");
   //  setTimeout(() => {  document.getElementById("form").submit(); }, 2000);
