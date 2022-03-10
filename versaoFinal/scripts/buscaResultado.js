@@ -44,7 +44,7 @@ function alertDelete() {
                 confirmButtonText: 'OK',
             }).then((result) => {
                 if(result.isConfirmed){
-                    document.getElementById("formDelete").submit(); 
+                    document.getElementById("form").submit(); 
                 }
             })
           }
