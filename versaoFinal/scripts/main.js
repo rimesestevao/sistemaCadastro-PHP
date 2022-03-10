@@ -88,7 +88,7 @@ function checkInputs(){
 
     if(celularValue && emailValue && enderecoValue && cidadeValue && sexoValue && idadeValue && rgValue && cpfValue && nomeValue != ""){
         if(validaCPF(cpfValue)){
-            alertCadastro("Cadastro válido!","Clique em OK para finalizar o cadastro e voltar para o menu.");
+            alertCadastro("Cadastro válido!","Clique em OK para finalizar o cadastro e voltar para o menu.","form1");
         }else{
             Swal.fire('Erro!','CPF não é válido','error')
         }
@@ -152,7 +152,7 @@ $("#cpf").mask("999.999.999-99");
 $("#rg").mask("99.999.999-9");
 
 
-function alertCadastro(titulo,texto) {
+function alertCadastro(titulo,texto,form) {
     Swal.fire({  
         icon:'success',
         title: titulo,    
@@ -160,7 +160,7 @@ function alertCadastro(titulo,texto) {
         confirmButtonText: `OK`,  
       }).then((result) => {  
           if (result.isConfirmed) {    
-            document.getElementById("form").submit();  
+            document.getElementById(form).submit();  
           }
       });
 }
@@ -170,16 +170,6 @@ function alertCadastro(titulo,texto) {
   //  setTimeout(() => {  document.getElementById("form").submit(); }, 2000);
     
 //}
-
-function alertFofoEdit() {
-    Swal.fire({
-        icon: "success",
-        title: "Cadastro alterado com sucesso!",
-        text: "Você será redirecionado em breve.",
-        showConfirmButton: false,
-        timer: 4500
-      })
-}
 
 
 // function mascara(i,t){
