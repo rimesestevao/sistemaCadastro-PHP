@@ -88,7 +88,7 @@ function checkInputs(){
 
     if(celularValue && emailValue && enderecoValue && cidadeValue && sexoValue && idadeValue && rgValue && cpfValue && nomeValue != ""){
         if(validaCPF(cpfValue)){
-            alertCadastro("Cadastro válido!","Clique em OK para finalizar o cadastro e voltar para o menu.","form1");
+            alertCadastro("Cadastro válido!","Clique em OK para finalizar o cadastro e voltar para o menu.");
         }else{
             Swal.fire('Erro!','CPF não é válido','error')
         }
@@ -152,7 +152,7 @@ $("#cpf").mask("999.999.999-99");
 $("#rg").mask("99.999.999-9");
 
 
-function alertCadastro(titulo,texto,form) {
+function alertCadastro(titulo,texto) {
     Swal.fire({  
         icon:'success',
         title: titulo,    
@@ -160,7 +160,7 @@ function alertCadastro(titulo,texto,form) {
         confirmButtonText: `OK`,  
       }).then((result) => {  
           if (result.isConfirmed) {    
-            document.getElementById(form).submit();  
+            document.getElementById("form1").submit();  
           }
       });
 }
