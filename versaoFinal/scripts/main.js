@@ -160,7 +160,7 @@ function alertCadastro(titulo,texto) {
         confirmButtonText: `OK`,  
       }).then((result) => {  
           if (result.isConfirmed) {    
-            document.getElementById("form1").submit();  
+            document.getElementById("form").submit();  
           }
       });
 }
