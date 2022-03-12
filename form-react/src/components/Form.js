@@ -7,7 +7,12 @@ const Form = () => {
             <h2>Cadastro com React.JS</h2>
             <div class="form__containerBox">
                 <div class="form__containerBoxInput">
-                    <label></label>
+                    <form>
+                      <div>
+                        <input></input>
+                        <label></label>
+                      </div>
+                    </form>
                 </div>
             </div>
         </div>
