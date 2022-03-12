@@ -1,10 +1,10 @@
 import React from 'react'
 
-const Input = () => {
+const Input = ({teste}) => {
   return (
     <div className='input__container'>
         <input/>
-        <label></label>
+        <label>{teste}</label>
     </div>
   )
 }

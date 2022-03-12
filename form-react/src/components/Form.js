@@ -1,4 +1,5 @@
 import React from 'react'
+import Input from './Input'
 
 const Form = () => {
   return (
@@ -8,10 +9,7 @@ const Form = () => {
             <div class="form__containerBox">
                 <div class="form__containerBoxInput">
                     <form>
-                      <div>
-                        <input></input>
-                        <label></label>
-                      </div>
+                      <Input teste = 'teste'/>
                     </form>
                 </div>
             </div>
