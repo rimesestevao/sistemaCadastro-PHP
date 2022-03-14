@@ -9,7 +9,7 @@ const Form = () => {
             <div class="form__containerBox">
                 <div class="form__containerBoxInput">
                     <form>
-                      <Input teste = 'teste'/>
+                      <Input />
                     </form>
                 </div>
             </div>
