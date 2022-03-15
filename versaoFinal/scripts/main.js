@@ -10,7 +10,6 @@ const email = document.getElementById('email');
 const celular = document.getElementById('celular');
 
 
-
 form.addEventListener('submit', (e) =>{
     
     e.preventDefault();
@@ -89,13 +88,12 @@ function checkInputs(){
 
     if(celularValue && emailValue && enderecoValue && cidadeValue && sexoValue && idadeValue && rgValue && cpfValue && nomeValue != ""){
         if(validaCPF(cpfValue)){
-            alertFofo("success","Cadastro realizado com sucesso!","Você será redirecionado em breve.");
-            setTimeout(() => {  document.getElementById("form").submit(); }, 2000);
+            alertCadastro("Cadastro válido!","Clique em OK para finalizar o cadastro e voltar para o menu.");
         }else{
-            alertFofo("error","CPF não é válido!","Preencha os campos corretamente.");
+            Swal.fire('Erro!','CPF não é válido','error');
         }
     }else{
-        alertFofo("error","Não pode deixar nenhum campo em branco!","Preencha os campos corretamente.");
+        Swal.fire('Erro!','Não pode deixar nenhum campo em branco!','error');
     }
 }
 
@@ -154,46 +152,19 @@ $("#cpf").mask("999.999.999-99");
 $("#rg").mask("99.999.999-9");
 
 
-function alertFofo(tipo,titulo,texto) {
-    Swal.fire({
-        icon: tipo,
-        title: titulo,
+function alertCadastro(titulo,texto) {
+    Swal.fire({  
+        icon:'success',
+        title: titulo,    
         text: texto,
-        showConfirmButton: false,
-        timer: 4500
-      })
+        confirmButtonText: `OK`,  
+      }).then((result) => {  
+          if (result.isConfirmed) {    
+            document.getElementById("form").submit();  
+          }
+      });
 }
 
-//function alertFofoDelete() {
- //   alertFofo("success","Você apagou o registro com sucesso!","Você será redirecionado em breve");
-  //  setTimeout(() => {  document.getElementById("form").submit(); }, 2000);
-    
-//}
-
-function alertFofoEdit() {
-    Swal.fire({
-        icon: "success",
-        title: "Cadastro alterado com sucesso!",
-        text: "Você será redirecionado em breve.",
-        showConfirmButton: false,
-        timer: 4500
-      })
-}
-
-function delay(n){
-    return new Promise(function(resolve){
-        setTimeout(resolve,n*1000);
-    });
-}
-
-async function asyncDelete(){
-    alertFofo("success","Você apagou o registro com sucesso!","Você será redirecionado em breve");
-
-    await delay(2);
-
-    document.getElementById("form").submit();
-
-}
 
 // function mascara(i,t){
    

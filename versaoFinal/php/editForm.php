@@ -109,11 +109,11 @@
 
 
             <a href="../pages/index.html" class="botaoOutline">Cancelar</a>
-            <button onClick="alertFofoEdit();" class="botaoSolid">Concluir</button>
+            <button onClick="alertCadastro('Sucesso!','Você editou o cadastro.','success','form4');" class="botaoSolid">Concluir</button>
 
         </form>
     </div>
-        <script>
+    <script>
         var text = '<?php echo "$sexo"?>';
         var select = document.querySelector('#sexo');
         for (var i = 0; i < select.options.length; i++) {
@@ -121,6 +121,8 @@
                 select.selectedIndex = i;
                 break;
             }
-}</script>
+        }
+    </script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </body>
 </html>
